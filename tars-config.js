@@ -58,9 +58,9 @@ module.exports = {
         96
     ],
     "fs": {
-        "staticFolderName": "assets",
+        "staticFolderName": "static",
         "imagesFolderName": "images",
         "componentsFolderName": "components"
     },
-    "staticPrefix": "showcoins/"
+    "staticPrefix": "static/"
 };

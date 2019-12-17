@@ -1,0 +1,110 @@
+@button-line-height:                            auto;
+@button-small-line-height:                      @global-control-small-height;
+@button-large-line-height:                      @global-control-large-height;
+
+@button-font-size:                              @global-font-size;
+@button-small-font-size:                        @global-small-font-size;
+@button-large-font-size:                        @global-medium-font-size;
+
+@button-padding-horizontal:                     @global-gutter;
+@button-small-padding-horizontal:               @global-small-gutter;
+@button-large-padding-horizontal:               @global-medium-gutter;
+
+@button-default-background:                     @global-muted-background;
+@button-default-color:                          @global-emphasis-color;
+@button-default-hover-background:               darken(@button-default-background, 5%);
+@button-default-hover-color:                    @global-emphasis-color;
+@button-default-active-background:              darken(@button-default-background, 10%);
+@button-default-active-color:                   @global-emphasis-color;
+
+@button-primary-background:                     @global-primary-background;
+@button-primary-color:                          @global-color;
+@button-primary-hover-background:               lighten(@global-primary-background, 40%);
+@button-primary-hover-color:                    @global-color;
+@button-primary-active-background:              @global-color;
+@button-primary-active-color:                   @global-primary-background;
+
+@button-secondary-background:                   transparent;
+@button-secondary-color:                        @global-color;
+@button-secondary-hover-background:             transparent;
+@button-secondary-hover-color:                  @global-color;
+@button-secondary-active-background:            transparent;
+@button-secondary-active-color:                 @global-primary-background;
+
+@button-invert-background:                      @global-primary-background;
+@button-invert-color:                           @global-inverse-color;
+@button-invert-hover-background:                lighten(@global-primary-background, 22%);
+@button-invert-hover-color:                     @global-inverse-color;
+@button-invert-active-background:               lighten(@global-primary-background, 22%);
+@button-invert-active-color:                    @global-inverse-color;
+
+@button-danger-background:                      @global-danger-background;
+@button-danger-color:                           @global-inverse-color;
+@button-danger-hover-background:                darken(@button-danger-background, 5%);
+@button-danger-hover-color:                     @global-inverse-color;
+@button-danger-active-background:               darken(@button-danger-background, 10%);
+@button-danger-active-color:                    @global-inverse-color;
+
+@button-disabled-background:                    @global-muted-background;
+@button-disabled-color:                         @global-muted-color;
+
+@button-text-line-height:                       @global-line-height;
+@button-text-color:                             @global-muted-color;
+@button-text-hover-color:                       @global-color;
+@button-text-disabled-color:                    @global-muted-color;
+
+@button-link-line-height:                       @global-line-height;
+@button-link-color:                             @global-link-color;
+@button-link-hover-color:                       @global-link-hover-color;
+@button-link-hover-text-decoration:             underline;
+@button-link-disabled-color:                    @global-muted-color;
+
+
+.hook-button() {
+  transition: all .2s;
+  font-size: @global-medium-font-size;
+  border-radius: 20px;
+  padding: 12px 35px;
+}
+
+.hook-button-hover() {}
+.hook-button-focus() {}
+.hook-button-active() {}
+.hook-button-default() {}
+.hook-button-default-hover() {}
+.hook-button-default-active() {}
+.hook-button-primary() {
+
+}
+.hook-button-primary-hover() {}
+.hook-button-primary-active() {}
+.hook-button-secondary() {
+  border: 1px solid @global-color;
+  padding: 12px 23px;
+  box-sizing: border-box;
+  &.uk-btn-img {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 25px;
+    img {
+      height: 37px;
+      width: auto;
+      margin-right: 11px;
+    }
+  }
+}
+.hook-button-secondary-hover() {}
+.hook-button-secondary-active() {}
+.hook-button-danger() {}
+.hook-button-danger-hover() {}
+.hook-button-danger-active() {}
+.hook-button-disabled() {}
+.hook-button-small() {}
+.hook-button-large() {}
+.hook-button-text() {}
+.hook-button-text-hover() {}
+.hook-button-text-disabled() {}
+.hook-button-link() {}
+
+.hook-button-misc() {}

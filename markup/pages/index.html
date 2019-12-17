@@ -8,7 +8,13 @@
     <body class="page">
         %=symbols=%
 
-        <section class="page__wrapper">
+        <header class="uk-header" data-uk-sticky>
+
+            {{> header/header header.defaults}}
+
+        </header>
+
+        <section class="page__wrapper uk-container">
 
             <!-- Include your modules here -->
 
