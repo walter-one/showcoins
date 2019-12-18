@@ -1,19 +1,42 @@
 .uk-header {
   background: @global-inverse-color;
   box-shadow: 0px 5px 40px rgba(172, 172, 172, 0.5);
-  padding: 20px 0;
+  padding: 0;
+  @media (min-width: @breakpoint-medium) {
+    padding: 12px 0;
+  }
   .uk-logo {
     padding: 0;
+    width: 106px;
+    height: 46px;
+    display: block;
+    min-height: 46px;
+    @media (min-width: @breakpoint-medium) {
+      width: 147px;
+      height: 64px;
+    }
   }
   .uk-slogan {
     font-weight: 700;
     font-size: @global-medium-font-size;
     margin-left: 20px;
   }
-  .uk-actions {
-    margin-left: 50px;
-    .uk-button-primary {
-      margin-left: 17px;
+  .uk-navbar-right {
+    .uk-navbar-item {
+      padding: 0;
+    }
+    .uk-actions {
+      margin-left: 24px;
+      @media (min-width: @breakpoint-large) {
+        margin-left: 50px;
+      }
+      .uk-button-primary {
+        margin-left: 17px;
+      }
+    }
+    .uk-navbar-toggle {
+      color: @global-color;
     }
   }
+
 }

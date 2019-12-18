@@ -1,5 +1,0 @@
-header: {
-    defaults: {
-        title: '',
-    }
-}

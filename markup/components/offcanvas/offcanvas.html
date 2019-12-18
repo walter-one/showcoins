@@ -1,0 +1,21 @@
+<div id="offcanvas-nav" uk-offcanvas="overlay: true">
+    <div class="uk-offcanvas-bar">
+        <a class="uk-navbar-item uk-logo" href="#">
+            <img src="%=static=%images/general/logo-white.svg" alt="Showcoins">
+        </a>
+        <ul class="uk-nav uk-nav-default">
+            {{#each items}}
+            <li class="uk-nav-item uk-active">
+                <a href="{{link}}"><img class="uk-icon-nav" src="%=static=%images/general/{{icon}}" alt="{{label}}">{{label}}</a>
+            </li>
+            {{/each}}
+            <li class="uk-nav-item uk-active">
+                <a href="{{link}}"><img class="uk-icon-nav" src="%=static=%images/general/icon-01.svg" alt="Dashboard">Dashboard</a>
+            </li>
+            <li class="uk-nav-item">
+                <a href="{{link}}"><img class="uk-icon-nav" src="%=static=%images/general/icon-2.svg" alt="Dashboard">Dashboard</a>
+            </li>
+        </ul>
+
+    </div>
+</div>

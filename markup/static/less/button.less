@@ -64,7 +64,10 @@
   transition: all .2s;
   font-size: @global-medium-font-size;
   border-radius: 20px;
-  padding: 12px 35px;
+  padding: 9px 35px;
+  @media (min-width: @breakpoint-medium) {
+    padding: 12px 23px;
+  }
 }
 
 .hook-button-hover() {}
@@ -80,13 +83,19 @@
 .hook-button-primary-active() {}
 .hook-button-secondary() {
   border: 1px solid @global-color;
-  padding: 12px 23px;
+  padding: 8px 23px;
   box-sizing: border-box;
+  @media (min-width: @breakpoint-medium) {
+    padding: 12px 23px;
+  }
   &.uk-btn-img {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 8px 25px;
+    padding: 5px 25px;
+    @media (min-width: @breakpoint-medium) {
+      padding: 8px 25px;
+    }
     img {
       height: 37px;
       width: auto;
