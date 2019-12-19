@@ -1,0 +1,55 @@
+<div class="uk-section-hero">
+    <div class="uk-container">
+        <div class="uk-hero-body">
+            <div class="uk-hero-content">
+                <div class="uk-hero-subtitle">ALL IN ONE</div>
+                <h1 class="uk-hero-title">W.S.M</h1>
+                <div class="uk-hero-text">
+                    The Show Coins team is pleasend to present you a centralized coin mining for all type of Mining
+                    called WSM. This system combines PoW, PoS and Masternode production into one system, also with
+                    exchange in BTC. This will give you greather profit than mining by one system.
+                </div>
+                <div class="uk-hero-actions uk-visible@s">
+                    <a href="#" class="uk-button uk-button-primary">Get start</a>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+            <div class="uk-hero-media">
+                <img src="%=static=%images/general/img-laptop.png" alt="image">
+                <div class="uk-hero-actions uk-hidden@s">
+                    <a href="#" class="uk-button uk-button-primary">Get start</a>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+        <div class="uk-section-card">
+            <div class="uk-child-width-1-2@s uk-child-width-1-4@m" uk-grid>
+                {{#each items}}
+                <div>
+                    <div class="uk-hero-card">
+                        <div class="uk-hero-card-header">
+                            <div class="uk-hero-card-title"><span>{{firstletter}}</span>{{title}}<span class="uk-item-border"></span></div>
+                            <div class="uk-hero-card-subtitle">{{subtitle}}</div>
+                            <div class="uk-hero-card-text">{{text}}</div>
+                        </div>
+                        <div class="uk-hero-card-body {{#if center}}uk-flex-center{{/if}}">
+                            {{#each info}}
+                            <div class="uk-hero-item">
+                                <div class="uk-item-title">{{title}}</div>
+                                <div class="uk-item-body">
+                                    <img src="%=static=%images/general/{{icon}}" alt="">
+                                    <span>{{count}}</span>
+                                </div>
+                            </div>
+                            {{/each}}
+                        </div>
+                        <div class="uk-card-action">
+                            <a href="#" class="uk-button uk-button-primary">{{button_text}}</a>
+                        </div>
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+    </div>
+</div>
