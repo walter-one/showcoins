@@ -1,10 +1,11 @@
 var data = {
-    offcanvas: {
+    nav: {
         items: [
             {
                 label: "Dashboard",
                 icon: 'icon-01.svg',
-                link: '#'
+                link: '#',
+                active: true
             },
             {
                 label: "Algo and Coins",
