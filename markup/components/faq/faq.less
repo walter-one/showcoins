@@ -1,0 +1,71 @@
+.uk-section-faq {
+  .uk-section-body {
+    margin-bottom: 50px;
+    .uk-accordion {
+      li {
+        a {
+          background: #F7F7F7;
+          border-radius: 20px;
+          padding: 25px 45px 25px 25px;
+          text-align: center;
+          font-weight: bold;
+          font-size: 14px;
+          line-height: 16px;
+          color: @global-color;
+          position: relative;
+          @media (min-width: @breakpoint-small) {
+            font-size: 18px;
+            line-height: 21px;
+          }
+          @media (min-width: @breakpoint-medium) {
+            font-size: 19px;
+            line-height: 22px;
+          }
+          > span {
+            position: absolute;
+            right: 27px;
+            top: 50%;
+            transform: translateY(-50%);
+          }
+          @media (min-width: @breakpoint-medium) {
+            font-size: 19px;
+          }
+        }
+        &.uk-open {
+          a {
+            border-radius: 20px 20px 0 0;
+            span {
+              transform: translateY(-50%) rotate(90deg);
+              color: @global-primary-background;
+            }
+          }
+        }
+        .uk-section-body {
+          @media (min-width: @breakpoint-medium) {
+            margin-bottom: 50px;
+          }
+        }
+        .uk-accordion-content {
+          margin: 0;
+          padding: 30px;
+          background: rgba(255, 204, 0, 0.2);
+          border-radius: 0 0 20px 20px;
+          font-size: 14px;
+          line-height: 16px;
+        }
+      }
+      & > :nth-child(n+2) {
+        margin-top: 12px;
+      }
+    }
+  }
+  .uk-section-action {
+    text-align: center;
+    a {
+      width: 100%;
+      @media (min-width: @breakpoint-medium) {
+        width: 435px;
+      }
+    }
+  }
+}

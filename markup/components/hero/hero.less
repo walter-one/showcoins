@@ -1,6 +1,21 @@
 .uk-section-hero {
   padding-top: 97px;
   padding-bottom: 40px;
+  background: linear-gradient(121.29deg, #000000 53.33%, rgba(225, 226, 230, 0.2) 96.68%);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  position: relative;
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.25);
+    opacity: .8;
+    z-index: -1;
+  }
   @media (min-width: @breakpoint-small) {
     padding-top: 83px;
     padding-bottom: 60px;
@@ -9,7 +24,6 @@
     padding-top: 193px;
     padding-bottom: 174px;
   }
-  background-image: linear-gradient(to right bottom, #000000, #151515, #232222, #313031, #3f3f40);
   .uk-hero-body {
     position: relative;
     z-index: 0;
@@ -131,9 +145,6 @@
     }
     .uk-hero-card {
       background: linear-gradient(90deg, rgba(22, 34, 42, 0.3) 0%, rgba(58, 96, 115, 0.3) 100%);
-      background-repeat: no-repeat;
-      background-position: 50% 50%;
-      background-size: cover;
       border-radius: 45px;
       border: 1px solid #676767;
       box-sizing: border-box;
@@ -142,6 +153,20 @@
       height: 100%;
       display: flex;
       flex-direction: column;
+      position: relative;
+      &:before {
+        content: '';
+        background-image: url('%=static=%general/bg-hero-card.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        opacity: .4;
+        filter: blur(8px);
+      }
       .uk-hero-card-header {
         flex: 1 0 auto;
       }
@@ -205,11 +230,23 @@
         }
         &.uk-flex-center {
           justify-content: center;
+          .uk-item-body {
+            span{
+              font-size: 14px;
+            }
+          }
         }
         .uk-item-body {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          span {
+            font-size: 35px;
+          }
           img {
             width: 37px;
             height: 37px;
+            margin-right: 9px;
           }
         }
       }

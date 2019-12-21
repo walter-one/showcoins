@@ -5,10 +5,10 @@
   "main": "gulpfile.js",
   "directories": {},
   "dependencies": {
-    "jquery": "^3.2.1",
     "@babel/core": "^7.7.5",
     "@babel/preset-env": "^7.7.6",
-    "slick-carousel": "1.8.0",
+    "jquery": "^3.2.1",
+    "slick-carousel": "^1.8.0",
     "uikit": "3.0.3"
   },
   "devDependencies": {

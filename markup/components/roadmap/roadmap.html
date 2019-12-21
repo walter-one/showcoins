@@ -1,0 +1,35 @@
+<section class="uk-section uk-section-roadmap uk-background-muted">
+    <div class="uk-container">
+        <h2 class="uk-section-title">Our Roadmap</h2>
+        <div class="uk-section-text">We are working hard on the new functionality of the platform</div>
+        <div class="uk-section-body">
+            <div id="uk-slider">
+                {{#each items}}
+                <div class="uk-card-roadmap {{class}}">
+                    <h2 class="uk-card-title">
+                        {{title}}
+                    </h2>
+                    <div class="uk-card-meta">
+                        <span>{{month}}</span>
+                        {{#if icon}}
+                        <div class="uk-icon-meta">
+                            <img src="%=static=%images/general/{{icon}}" alt="icon">
+                        </div>
+                        {{/if}}
+                    </div>
+                    <div class="uk-card-media">
+                        <span><img src="%=static=%images/general/ico-check1.svg" alt="check"></span>
+                    </div>
+                    <div class="uk-card-content">
+                        <ul>
+                            {{#each content}}
+                            <li>{{text}}</li>
+                            {{/each}}
+                        </ul>
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+    </div>
+</section>

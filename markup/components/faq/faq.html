@@ -1,0 +1,26 @@
+<section class="uk-section uk-section-faq">
+    <div class="uk-container">
+        <h2 class="uk-section-title">FAQ</h2>
+        <div class="uk-section-body">
+            <div class="uk-grid-medium uk-child-width-1-2@m" uk-grid>
+                {{#each items}}
+                <div>
+                    <ul uk-accordion>
+                        {{#each column}}
+                        <li>
+                            <a class="uk-accordion-title" href="#">{{title}} <span uk-icon="triangle-right"></span></a>
+                            <div class="uk-accordion-content">
+                                {{text}}
+                            </div>
+                        </li>
+                        {{/each}}
+                    </ul>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+        <div class="uk-section-action uk-visible@s">
+            <a href="#" class="uk-button uk-button-primary">Watch all question</a>
+        </div>
+    </div>
+</section>

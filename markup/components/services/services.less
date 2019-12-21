@@ -1,0 +1,46 @@
+.uk-section-service {
+  padding: 60px 0;
+  .uk-section-body {
+    .uk-card-service {
+      height: 100%;
+      >a {
+        background: #FFFFFF;
+        border-radius: 45px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: @global-color;
+        padding: 50px 10px 70px;
+        height: 100%;
+        box-sizing: border-box;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.12);
+        text-align: center;
+        &:hover {
+          text-decoration: none;
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.12);
+        }
+        .uk-card-title {
+          font-size: 30px;
+          line-height: 35px;
+          font-weight: bold;
+          margin-bottom: 10px;
+        }
+        .uk-card-content {
+          font-size: 20px;
+          line-height: 23px;
+          text-align: center;
+        }
+        @media (min-width: @breakpoint-medium) {
+          box-shadow: none;
+        }
+      }
+      .uk-card-media {
+        max-width: 96px;
+        margin-bottom: 25px;
+        @media (min-width: @breakpoint-small) {
+          max-width: 118px;
+        }
+      }
+    }
+  }
+}

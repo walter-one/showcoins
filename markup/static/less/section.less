@@ -1,0 +1,45 @@
+@section-padding-vertical:                        40px;
+@section-padding-vertical-m:                      80px;
+
+@section-xsmall-padding-vertical:                 @global-margin;
+
+@section-small-padding-vertical:                  @global-medium-margin;
+
+@section-large-padding-vertical:                  @global-large-margin;
+@section-large-padding-vertical-m:                @global-xlarge-margin;
+
+@section-xlarge-padding-vertical:                 @global-xlarge-margin;
+@section-xlarge-padding-vertical-m:               (@global-large-margin + @global-xlarge-margin);
+
+@section-default-background:                      @global-background;
+
+@section-muted-background:                        @global-muted-background;
+
+@section-primary-background:                      @global-primary-background;
+@section-primary-color-mode:                      light;
+
+@section-secondary-background:                    @global-secondary-background;
+@section-secondary-color-mode:                    light;
+
+
+
+.hook-section-misc() {
+  h2.uk-section-title {
+    font-size: 32px;
+    line-height: 37px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 26px;
+    color: @global-color;
+    @media (min-width: @breakpoint-medium) {
+      font-size: 40px;
+      line-height: 47px;
+      margin-bottom: 40px;
+    }
+    @media (min-width: @breakpoint-medium) {
+      font-size: 50px;
+      line-height: 58px;
+      margin-bottom: 90px;
+    }
+  }
+}
