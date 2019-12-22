@@ -18,6 +18,10 @@
     width: 90px;
     z-index: 1;
     transform: scaleX(-1);
+    display: none;
+    @media (min-width: @breakpoint-medium) {
+      display: block;
+    }
   }
   .uk-section-title {
     margin-bottom: 16px;
@@ -183,6 +187,15 @@
             background: @global-primary-background;
             position: relative;
             z-index: 1;
+          }
+        }
+      }
+      &.uk-active {
+        .uk-card-meta {
+          .uk-icon-meta {
+            &:after {
+              width: 200px;
+            }
           }
         }
       }

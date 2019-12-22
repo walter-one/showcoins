@@ -1,0 +1,43 @@
+.uk-footer {
+  background: linear-gradient(163.43deg, #000000 9.83%, #454545 85.74%);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  color: @global-inverse-color;
+  padding: 50px 0;
+  font-size: 14px;
+  line-height: 16px;
+  @media (min-width: @breakpoint-small) {
+    font-size: 18px;
+    line-height: 21px;
+  }
+  @media (min-width: @breakpoint-medium) {
+    font-size: 25px;
+    line-height: 29px;
+  }
+
+  .uk-footer-title {
+    margin-bottom: 30px;
+  }
+  .uk-footer-body {
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      li {
+        margin-bottom: 10px;
+        a {
+          color: @global-inverse-color;
+        }
+      }
+
+      &.uk-social {
+        display: flex;
+        margin-bottom: 18px;
+        li {
+          margin-right: 20px;
+          width: 43px;
+          height: 43px;
+        }
+      }
+    }
+  }
+}
