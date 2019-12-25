@@ -8,7 +8,7 @@
     background: linear-gradient(270deg, #F8F8F8 34.62%, rgba(248, 248, 248, 0.2) 100%);
     right: 0;
     height: 100%;
-    width: 140px;
+    width: 23%;
     position: absolute;
     top: 12px;
   }
@@ -67,9 +67,13 @@
       left: -60px;
       z-index: 1;
       background: #fff;
+      transition: background .2s ease 0s;
+      &:hover {
+        background: @global-primary-background;
+      }
       &.uk-slick-next {
         left: auto;
-        right: 0px;
+        right: 0;
         @media (min-width: @breakpoint-small) {
           right: -60px;
         }
@@ -194,7 +198,7 @@
         .uk-card-meta {
           .uk-icon-meta {
             &:after {
-              width: 200px;
+              width: 500px;
             }
           }
         }
@@ -209,7 +213,7 @@
             background: @global-color;
             position: absolute;
             left: 0;
-            bottom: -1px;
+            bottom: 0;
           }
         }
         .uk-card-content {

@@ -26,7 +26,7 @@
 
 @button-secondary-background:                   transparent;
 @button-secondary-color:                        @global-color;
-@button-secondary-hover-background:             transparent;
+@button-secondary-hover-background:             @global-primary-background;
 @button-secondary-hover-color:                  @global-color;
 @button-secondary-active-background:            transparent;
 @button-secondary-active-color:                 @global-primary-background;
@@ -94,10 +94,14 @@
     justify-content: space-between;
     align-items: center;
     padding: 5px 25px;
+    color: @global-primary-background;
     @media (min-width: @breakpoint-medium) {
       padding: 8px 25px;
     }
-    img {
+    span {
+      color: @global-color;
+    }
+    img, svg {
       height: 37px;
       width: auto;
       margin-right: 11px;

@@ -1,0 +1,208 @@
+.uk-wrapper {
+  height: 100%;
+}
+.uk-section-registration-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media (min-width: @breakpoint-small) {
+    height: 100%;
+    overflow: hidden;
+  }
+  @media (min-width: @breakpoint-xlarge) {
+    overflow: visible;
+  }
+  .uk-section-holder {
+    width: 100%;
+    .uk-container {
+      max-width: 1680px;
+      .uk-flex {
+        flex-direction: column-reverse;
+        @media (min-width: @breakpoint-small) {
+          flex-direction: row;
+        }
+      }
+    }
+  }
+  .uk-section-header {
+    position: relative;
+    background-image: url('%=static=%general/bg-left-form.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 0;
+    padding: 25px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    @media (min-width: @breakpoint-small) {
+      display: none;
+      height: 100vh;
+      max-width: 740px;
+    }
+    @media (min-width: @breakpoint-medium) {
+      display: flex;
+      flex: 1 0 50%;
+    }
+    @media (min-width: @breakpoint-xlarge) {
+      min-height: 1000px;
+      height: auto;
+      flex: 1 0 auto;
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.8) 100%);
+    }
+    .uk-section-title {
+      font-weight: bold;
+      font-size: 96px;
+      line-height: 112px;
+      margin: 0;
+      color: @global-primary-background;
+      @media (min-width: @breakpoint-medium) {
+        font-size: 120px;
+        line-height: 140px;
+      }
+    }
+    .uk-section-subtitle {
+      margin: 0;
+      color: #fff;
+      font-size: 24px;
+      text-align: center;
+      @media (min-width: @breakpoint-small) {
+        font-size: 32px;
+      }
+    }
+  }
+  .uk-section-body {
+    flex: 1 0 auto;
+    @media (min-width: @breakpoint-small) {
+      overflow-y: auto;
+      height: 100vh;
+    }
+    @media (min-width: @breakpoint-medium) {
+      flex: 1 0 50%;
+    }
+    @media (min-width: @breakpoint-xlarge) {
+      height: auto;
+    }
+    .uk-link-back {
+      color: @global-color;
+      display: block;
+      margin-bottom: 40px;
+      font-size: 14px;
+      @media (min-width: @breakpoint-large) {
+        margin-bottom: 70px;
+        font-size: 20px;
+      }
+      .arrow {
+        width: 11px;
+        height: 8px;
+        display: inline-block;
+        background: url('%=static=%general/arrow.svg') no-repeat;
+        margin-right: 8px;
+        @media (min-width: @breakpoint-large) {
+          height: 11px;
+        }
+      }
+    }
+    .uk-form-title {
+      font-size: @global-large-font-size;
+      font-weight: bold;
+      margin-bottom: 50px;
+      @media (min-width: @breakpoint-large) {
+        margin-bottom: 40px;
+      }
+      .uk-logo-form {
+        display: block;
+        width: 106px;
+        margin-bottom: 30px;
+        @media (min-width: @breakpoint-large) {
+          width: 235px;
+          margin-bottom: 65px;
+        }
+        img {
+          width: 100%;
+        }
+      }
+    }
+    .uk-form {
+      label {
+        font-size: 14px;
+        display: block;
+        margin-bottom: 5px;
+        @media (min-width: @breakpoint-medium) {
+          font-size: 20px;
+        }
+      }
+      [type='text'],
+      [type='password'],
+      [type='email'] {
+        border: 0;
+        border-bottom: 1px solid #000;
+        margin-bottom: 24px;
+        width: 100%;
+        font-size: 18px;
+        line-height: 25px;
+        @media (min-width: @breakpoint-medium) {
+          font-size: 22px;
+          line-height: 35px;
+        }
+        @media (min-width: @breakpoint-xlarge) {
+          margin-bottom: 50px;
+        }
+      }
+      .uk-button {
+        width: 100%;
+        margin-bottom: 20px;
+        @media (min-width: @breakpoint-small) {
+          margin-bottom: 48px;
+        }
+      }
+      .uk-form-links {
+        display: flex;
+        flex-direction: column;
+        font-size: 16px;
+        text-align: center;
+        flex-wrap: nowrap;
+        @media (min-width: @breakpoint-small) {
+          justify-content: space-between;
+          flex-direction: row;
+        }
+        @media (min-width: @breakpoint-medium) {
+          font-size: 20px;
+        }
+        a {
+          text-decoration: underline;
+          margin-bottom: 20px;
+          @media (min-width: @breakpoint-small) {
+            margin-bottom: 0;
+          }
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+    .uk-section-body-holder {
+      padding: 30px;
+      @media (min-width: @breakpoint-xlarge) {
+        padding: 30px 128px;
+      }
+    }
+    .uk-form-content {
+      font-size: 18px;
+      @media (min-width: @breakpoint-small) {
+        font-size: 30px;
+      }
+    }
+  }
+}
