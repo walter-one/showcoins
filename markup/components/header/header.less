@@ -1,6 +1,6 @@
 .uk-header {
   background: @global-inverse-color;
-  box-shadow: 0px 5px 40px rgba(172, 172, 172, 0.5);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
   padding: 0;
   @media (min-width: @breakpoint-medium) {
     padding: 12px 0;
@@ -20,6 +20,13 @@
     font-weight: 700;
     font-size: @global-medium-font-size;
     margin-left: 20px;
+  }
+  .uk-navbar-left {
+    .uk-title {
+      font-size: @global-xlarge-font-size;
+      color: @global-color;
+      margin: 0;
+    }
   }
   .uk-navbar-right {
     .uk-navbar-item {

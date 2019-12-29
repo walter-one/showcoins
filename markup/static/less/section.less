@@ -43,3 +43,32 @@
     }
   }
 }
+.uk-main-inner {
+  display: flex;
+  flex-direction: row-reverse;
+  .uk-container {
+    @media (min-width: @breakpoint-small) {
+      padding: 0 24px;
+    }
+  }
+  & + .uk-footer {
+    .uk-container {
+      @media (min-width: @breakpoint-small) {
+        padding: 0 24px;
+      }
+    }
+  }
+  .uk-content {
+    padding: 15px 0 25px;
+    @media (min-width: @breakpoint-medium) {
+      padding: 25px 0 50px;
+    }
+  }
+}
+.uk-wrapper {
+  width: 100%;
+  @media (min-width: @breakpoint-medium) {
+    width: calc(~'100% - 275px');
+  }
+
+}

@@ -15,62 +15,65 @@
 
 @offcanvas-overlay-background:                  rgba(0,0,0,0.5);
 
-.hook-offcanvas-bar() {
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
-  padding-left: 0;
-  padding-right: 0;
-  .uk-logo {
-    position: relative;
-  }
-  &:before {
-    content: '';
-    background-image: url("%=static=%general/rectangle.png");
-    background-repeat: no-repeat;
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: 0;
-    width: 100%;
-    height: 100%;
-  }
-  .uk-nav {
-    padding: 130px 0 0;
-    .uk-nav-item {
-      &.uk-active, &:hover {
-        a {
-          &:after, &:before {
-            content: '';
-            background-image: url("%=static=%general/bg-item.png");
-            height: 100%;
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 100%;
-            z-index: -1;
-          }
-          &:before {
-            content: '';
-            background: @global-primary-background;
-            width: 9px;
-            z-index: 0;
+.hook-offcanvas-bar() {}
+.hook-offcanvas-close() {}
+.hook-offcanvas-overlay() {}
+.hook-offcanvas-misc() {
+  .uk-offcanvas-bar,
+  .uk-sidenav-bar{
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+    padding-left: 0;
+    padding-right: 0;
+    .uk-logo {
+      position: relative;
+    }
+    &:before {
+      content: '';
+      background-image: url("%=static=%general/rectangle.png");
+      background-repeat: no-repeat;
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 0;
+      width: 100%;
+      height: 100%;
+    }
+    .uk-nav {
+      padding: 130px 0 0;
+      .uk-nav-item {
+        &.uk-active, &:hover {
+          a {
+            &:after, &:before {
+              content: '';
+              background-image: url("%=static=%general/bg-item.png");
+              height: 100%;
+              position: absolute;
+              left: 0;
+              top: 0;
+              width: 100%;
+              z-index: -1;
+            }
+            &:before {
+              content: '';
+              background: @global-primary-background;
+              width: 9px;
+              z-index: 0;
+            }
           }
         }
-      }
-      a {
-        position: relative;
-        padding: 20px 10px 20px 50px;
-        z-index: 1;
-        display: flex;
-        align-items: center;
-        color: #fff;
-        img {
-          margin-right: 8px;
+        a {
+          position: relative;
+          padding: 20px 10px 20px 50px;
+          z-index: 1;
+          display: flex;
+          align-items: center;
+          color: #fff;
+          img {
+            margin-right: 8px;
+          }
         }
       }
     }
-  }
 
+  }
 }
-.hook-offcanvas-close() {}
-.hook-offcanvas-overlay() {}
-.hook-offcanvas-misc() {}

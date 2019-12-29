@@ -1,25 +1,7 @@
-<nav class="uk-container" uk-navbar>
-    <div class="uk-navbar-left">
-        <a class="uk-navbar-item uk-logo" href="#">
-            <img src="%=static=%images/general/logo.svg" alt="Showcoins">
-        </a>
-        <span class="uk-navbar-item uk-slogan uk-visible@l">WSM progressive mining system</span>
-    </div>
-    <div class="uk-navbar-right">
-        <div class="uk-navbar-item uk-visible@m">
-            <a href="#" class="uk-button uk-button-secondary uk-btn-img">
-                <img src="%=static=%images/general/icon-tools.svg" uk-svg alt="You workers">
-                <span>You workers</span>
-            </a>
-        </div>
-        <div class="uk-navbar-item uk-visible@m">
-            <div class="uk-actions">
-                <a class="uk-button uk-button-secondary" href="/login.html">Sign in</a>
-                <a class="uk-button uk-button-primary" href="/registration.html">Register</a>
-            </div>
-        </div>
-        <a class="uk-navbar-toggle uk-hidden@m" uk-navbar-toggle-icon href="#" uk-toggle="target: #offcanvas-nav"></a>
-    </div>
-</nav>
+{{#if nav_default}}
+{{> navbar/navbar-default }}
+{{/if}}
 
-{{> offcanvas/offcanvas nav }}
+{{#if nav_inner}}
+{{> navbar/navbar-inner }}
+{{/if}}

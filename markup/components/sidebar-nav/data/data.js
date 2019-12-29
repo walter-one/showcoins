@@ -1,5 +1,5 @@
 var data = {
-    offcanvas: {
+    sidenav: {
         items: [
             {
                 label: "Dashboard",

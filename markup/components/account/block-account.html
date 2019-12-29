@@ -1,0 +1,147 @@
+<div class="uk-child-width-1-2@m" uk-grid>
+    <div>
+        <div class="uk-card uk-card-account">
+            <div class="uk-card-title">Account</div>
+            <div class="uk-card-body">
+                <div class="uk-form-inner">
+                    <div class="uk-form-row">
+                        <label for="fname">First Name</label>
+                        <div class="uk-inline">
+                            <span class="uk-icon-edit">
+                                <img src="%=static=%images/general/icon-edit.svg" alt="">
+                            </span>
+                            <input class="uk-input" id="fname" type="text" value="Timur">
+                        </div>
+                    </div>
+                    <div class="uk-form-row">
+                        <label for="lname">Last Name</label>
+                        <div class="uk-inline">
+                            <span class="uk-icon-edit">
+                                <img src="%=static=%images/general/icon-edit.svg" alt="">
+                            </span>
+                            <input class="uk-input" id="lname" type="text" value="Showcoins">
+                        </div>
+                    </div>
+                    <div class="uk-form-row">
+                        <label for="nickname">Nickname</label>
+                        <div class="uk-inline">
+                            <span class="uk-icon-edit">
+                                <img src="%=static=%images/general/icon-edit.svg" alt="">
+                            </span>
+                            <input class="uk-input" id="nickname" type="text" value="timur">
+                        </div>
+                    </div>
+                    <div class="uk-form-row">
+                        <label for="email">E-mail</label>
+                        <div class="uk-inline">
+                            <span class="uk-icon-edit">
+                                <img src="%=static=%images/general/icon-edit.svg" alt="">
+                            </span>
+                            <input class="uk-input" id="email" type="text" value="timur@showcn.com">
+                        </div>
+                    </div>
+                    <div class="uk-form-row">
+                        <label for="registration">Registration date</label>
+                        <input class="uk-input" id="registration" type="text" readonly value="2019-03-22   12:45:31">
+                    </div>
+                    <div class="uk-form-row">
+                        <label for="visit">Last visit</label>
+                        <input class="uk-input" id="visit" type="text" readonly value="2019-11-06   09:14:15">
+                    </div>
+                    <div class="uk-form-row">
+                        <label for="status">Status</label>
+                        <input class="uk-input" id="status" type="text" readonly value="Active">
+                    </div>
+                    <div class="uk-form-row">
+                        <label for="scomission">Stacking comission</label>
+                        <input class="uk-input" id="scomission" type="text" readonly value="5%">
+                    </div>
+                    <div class="uk-form-row">
+                        <label for="mcomission">Masternode comission</label>
+                        <input class="uk-input" id="mcomission" type="text" readonly value="5%">
+                    </div>
+                    <div class="uk-form-row">
+                        <label>Email notification</label>
+                        <div class="uk-checkbox-group">
+                            <label>
+                                <input type="checkbox" class="uk-checkbox">
+                                Receive a summary reports
+                            </label>
+                            <label>
+                                <input type="checkbox" class="uk-checkbox">
+                                Receive wallet notifications
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="uk-card uk-card-account">
+            <div class="uk-card-title">Security</div>
+            <div class="uk-card-body">
+                <div class="uk-form-inner">
+                    <div class="uk-form-row">
+                        <label>Google 2F authentication</label>
+                        <div class="uk-button-group">
+                            <div>
+                                <input class="uk-radio" id='radio-disable' type="radio" name="radio2" checked>
+                                <label for='radio-disable'><span>Disabled</span></label>
+                            </div>
+                            <div>
+                                <input class="uk-radio" id='radio-enable' type="radio" name="radio2">
+                                <label for='radio-enable'><span>Enables</span></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="uk-card uk-card-account">
+            <div class="uk-card-title">WSM</div>
+            <div class="uk-card-body">
+                <div class="uk-form-inner">
+                    <div class="uk-type-range">
+                        <span uk-tooltip="title: 50% discount fee" style="left: 0"><em>Lvl 0</em></span>
+                        <span uk-tooltip="title: 50% discount fee" style="left: 30%"><em>Lvl 1</em></span>
+                        <span uk-tooltip="title: 50% discount fee" style="left: 63%"><em>Lvl 2</em></span>
+                        <span uk-tooltip="title: 50% discount fee" style="left: 100%"><em>Lvl 3</em></span>
+                    </div>
+                    <div class="uk-form-row">
+                        <label for="wsm-key">WSM Key</label>
+                        <input class="uk-input" id="wsm-key" type="text" readonly value="dd3f558ef04bb628516764454ac79dd1">
+                    </div>
+                    <div class="uk-form-row">
+                        <label for="wsm-time">WSM Activation Time</label>
+                        <input class="uk-input" id="wsm-time" type="text" readonly value="2019-03-22   12:45:31">
+                    </div>
+                    <div class="uk-form-row">
+                        <label for="wsm-amount">WSM Amount</label>
+                        <input class="uk-input" id="wsm-amount" type="text" readonly value="200">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="uk-card uk-card-account">
+            <div class="uk-card-title">Password</div>
+            <div class="uk-card-body">
+                <div class="uk-form-inner">
+                    <div class="uk-form-row">
+                        <label for="password">Current password</label>
+                        <input class="uk-input" id="password" type="password" value="jkdji3/kdkoels">
+                    </div>
+                    <div class="uk-form-row">
+                        <label for="new-password">New password</label>
+                        <input class="uk-input" id="new-password" type="password" value="">
+                    </div>
+                    <div class="uk-form-row">
+                        <label for="password2">Repeat new password</label>
+                        <input class="uk-input" id="password2" type="text" value="">
+                    </div>
+                    <button class="uk-button uk-button-primary">Change password</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

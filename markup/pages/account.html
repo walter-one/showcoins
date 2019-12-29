@@ -1,0 +1,44 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+
+<head>
+    {{> head/head head.defaults}}
+</head>
+
+<body class="page">
+%=symbols=%
+
+<div class="uk-main-inner">
+
+    <div class="uk-wrapper">
+        <header class="uk-header" data-uk-sticky>
+            {{> header/header header.inner }}
+        </header>
+        <div class="uk-content uk-content-account">
+            <div class="uk-container">
+                {{> account/block-account}}
+                {{> account/tabs}}
+                {{> account/accordion}}
+            </div>
+        </div>
+    </div>
+    <div class="uk-sidebar">
+        {{> sidebar-nav/sidenav sidenav}}
+    </div>
+
+</div>
+
+<footer class="uk-footer">
+    {{> footer/footer}}
+</footer>
+
+{{> offcanvas/offcanvas offcanvas }}
+
+<script src="%=static=%js/separate-js/svg4everybody.min.js"></script>
+<script>svg4everybody();</script>
+
+<!-- Main scripts. You can replace it, but I recommend you to leave it here     -->
+<script src="%=static=%js/main%=hash=%%=min=%.js"></script>
+</body>
+
+</html>

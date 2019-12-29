@@ -2,7 +2,7 @@
 <html class="no-js" lang="ru">
 
     <head>
-        {{> head/head head.defaults}}
+        {{> head/head head}}
     </head>
 
     <body class="page">
@@ -10,7 +10,7 @@
 
         <header class="uk-header" data-uk-sticky>
 
-            {{> header/header }}
+            {{> header/header header.main}}
 
         </header>
 
@@ -31,6 +31,8 @@
         <footer class="uk-footer">
             {{> footer/footer}}
         </footer>
+
+        {{> offcanvas/offcanvas offcanvas }}
 
         <script src="%=static=%js/separate-js/svg4everybody.min.js"></script>
         <script>svg4everybody();</script>

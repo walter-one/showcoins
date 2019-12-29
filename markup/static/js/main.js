@@ -11,6 +11,7 @@ import $ from 'jquery';
 import UIkit from "uikit";
 import Icons from 'uikit/dist/js/uikit-icons';
 import 'slick-carousel/slick/slick.min';
+import 'malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min'
 
 // loads the Icon plugin
 UIkit.use(Icons);
@@ -38,3 +39,10 @@ $('#uk-slider').slick({
     nextArrow: '<button class="uk-slick-next" uk-icon="icon: chevron-right"></button>',
     prevArrow: '<button class="uk-slick-previous" uk-icon="icon: chevron-left"></button>'
 });
+
+$(".mCustomScrollbar").each(function(){
+    $(this).mCustomScrollbar({
+        axis:"x" // horizontal scrollbar
+    });
+})
+
