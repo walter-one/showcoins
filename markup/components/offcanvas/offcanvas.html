@@ -1,8 +1,31 @@
 <div id="offcanvas-nav" uk-offcanvas="overlay: true">
     <div class="uk-offcanvas-bar">
-        <a class="uk-navbar-item uk-logo" href="#">
-            <img src="%=static=%images/general/logo-white.svg" alt="Showcoins">
-        </a>
+        <div class="uk-offcanvas-header">
+            <a class="uk-navbar-item uk-logo" href="#">
+                <img src="%=static=%images/general/logo-white.svg" alt="Showcoins">
+            </a>
+            <div class="uk-offcanvas-actions uk-hidden">
+                <a href="#" class="uk-button uk-button-secondary uk-ico-tools">
+                    <img src="%=static=%images/general/icon-tools.svg" uk-svg alt="You workers">
+                </a>
+                <a href="#" class="uk-button uk-button-secondary uk-ico-exit">
+                    <img src="%=static=%images/general/ico-logout.svg" uk-svg alt="You workers">
+                </a>
+                <a href="#" class="uk-button uk-button-secondary uk-ico-registr">
+                    <img src="%=static=%images/general/ico-name.svg" uk-svg alt="You workers">
+                </a>
+            </div>
+            <div class="uk-offcanvas-actions uk-offcanvas-register">
+                <a href="#" class="uk-button uk-button-secondary uk-ico-name">
+                    <img src="%=static=%images/general/ico-name.svg" uk-svg alt="You workers">
+                    <span>Name</span>
+                </a>
+                <a href="#" class="uk-button uk-button-secondary uk-ico-exit">
+                    <img src="%=static=%images/general/ico-logout.svg" uk-svg alt="You workers">
+                </a>
+            </div>
+        </div>
+
         <ul class="uk-nav uk-nav-default">
             {{#each items}}
             <li class="uk-nav-item {{#if active}}uk-active{{/if}}">

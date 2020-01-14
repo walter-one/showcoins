@@ -23,14 +23,14 @@
             </div>
         </div>
         <div class="uk-section-card">
-            <div class="uk-grid uk-child-width-1-2@m uk-child-width-1-4@l" uk-grid>
+            <div class="uk-grid uk-child-width-1-2 uk-child-width-1-4@m" uk-grid>
                 {{#each items}}
                 <div>
                     <div class="uk-hero-card">
                         <div class="uk-hero-card-header">
                             <div class="uk-hero-card-title"><span>{{firstletter}}</span>{{title}}<span class="uk-item-border"></span></div>
-                            <div class="uk-hero-card-subtitle">{{subtitle}}</div>
-                            <div class="uk-hero-card-text">{{text}}</div>
+                            <div class="uk-hero-card-subtitle uk-visible@m">{{subtitle}}</div>
+                            <div class="uk-hero-card-text uk-visible@l">{{text}}</div>
                         </div>
                         <div class="uk-hero-card-body {{#if center}}uk-flex-center{{/if}}">
                             {{#each info}}

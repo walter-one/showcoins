@@ -1,6 +1,6 @@
 @offcanvas-z-index:                             @global-z-index;
 
-@offcanvas-bar-width:                           275px;
+@offcanvas-bar-width:                           304px;
 @offcanvas-bar-padding-vertical:                @global-margin;
 @offcanvas-bar-padding-horizontal:              0px;
 @offcanvas-bar-background:                      @global-background;
@@ -24,8 +24,18 @@
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
     padding-left: 0;
     padding-right: 0;
+    @media (max-width: @breakpoint-small-max) {
+      padding-top: 0;
+    }
     .uk-logo {
       position: relative;
+      @media (max-width: @breakpoint-small-max) {
+        justify-content: space-between;
+        img {
+          width: 106px;
+          height: 46px;
+        }
+      }
     }
     &:before {
       content: '';
@@ -37,9 +47,13 @@
       z-index: 0;
       width: 100%;
       height: 100%;
+      background-size: 330px 100%;
     }
     .uk-nav {
       padding: 130px 0 0;
+      @media (max-width: @breakpoint-small-max) {
+        padding-top: 33px;
+      }
       .uk-nav-item {
         &.uk-active, &:hover {
           a {
@@ -52,6 +66,7 @@
               top: 0;
               width: 100%;
               z-index: -1;
+              background-size: 304px auto;
             }
             &:before {
               content: '';
@@ -68,12 +83,76 @@
           display: flex;
           align-items: center;
           color: #fff;
+          @media (max-width: @breakpoint-small-max) {
+            padding-left: 20px;
+          }
           img {
             margin-right: 8px;
           }
         }
       }
     }
-
+    @media (max-width: @breakpoint-small-max) {
+      .uk-offcanvas-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-right: 16px;
+      }
+      .uk-offcanvas-actions {
+        display: flex;
+        position: relative;
+        a{
+          width: 32px;
+          height: 32px;
+          border-radius: 100px;
+          padding: 0;
+          justify-content: center;
+          align-items: center;
+          margin-left: 10px;
+          @media (max-width: @breakpoint-small-max) {
+            &:hover {
+              background-color: transparent;
+            }
+          }
+          &.uk-ico-registr {
+            background: @global-primary-background;
+            border-color: @global-primary-background;
+          }
+          &.uk-ico-tools {
+            border-color: @global-primary-background;
+            color: #fff;
+          }
+          &.uk-ico-exit {
+            border-color: @global-background;
+            path {
+              fill:#fff;
+            }
+          }
+          svg, img {
+            width: 17px;
+            height: 17px;
+            margin: 0;
+          }
+        }
+        &.uk-offcanvas-register {
+          .uk-ico-name {
+            width: auto;
+            padding: 0 13px;
+            color: #fff;
+            font-weight: normal;
+            font-size: 16px;
+            display: flex;
+            border-color: @global-background;
+            img,svg {
+              margin-right: 5px;
+              path {
+                fill:#fff;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
