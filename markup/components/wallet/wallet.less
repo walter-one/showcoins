@@ -1,0 +1,120 @@
+.uk-card-wallet {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  .uk-card {
+    &-header {
+      padding: 30px 30px 0;
+      text-align: center;
+      margin-bottom: 10px;
+      .uk-card-text-notice {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        .ico-notice {
+          width: 24px;
+          height: 24px;
+          margin-right: 5px;
+          flex: 0 0 auto;
+        }
+      }
+      > div {
+        font-size: 14px;
+        line-height: 22px;
+        margin-bottom: 6px;
+        @media (min-width: @breakpoint-large) {
+          font-size: 20px;
+          line-height: 23px;
+          margin-bottom: 20px;
+        }
+        a {
+          text-decoration: underline;
+          color: @global-primary-background;
+        }
+      }
+    }
+    &-title {
+      color: @global-color;
+      @media (max-width: @breakpoint-medium-max) {
+        font-size: 24px;
+        line-height: 28px;
+      }
+      @media (max-width: @breakpoint-small-max) {
+        font-size: 18px;
+        line-height: 21px;
+      }
+    }
+    &-body {
+      padding: 0;
+      @media (min-width: @breakpoint-medium) {
+        padding: 0 30px;
+      }
+      table {
+        thead {
+          background: @global-primary-background;
+          .uk-table-expand {
+            @media (max-width: @breakpoint-xsmall-max) {
+              min-width: inherit;
+            }
+          }
+        }
+        tbody {
+          tr {
+            background: #F1F1F1;
+            td {
+              border:1px solid #fff;
+              border-width: 1px 0;
+              @media (min-width: @breakpoint-small) {
+                border-width: 5px 0;
+              }
+              @media (min-width: @breakpoint-medium) {
+                border-width: 10px 0;
+              }
+              > div {
+                display: flex;
+              }
+            }
+          }
+        }
+        th, td {
+          font-size: 14px;
+          padding: 16px 5px;
+          @media (min-width: @breakpoint-small) {
+            font-size: 16px;
+            padding: 16px 15px;
+          }
+          @media (min-width: @breakpoint-large) {
+            font-size: 17px;
+            padding: 16px 20px;
+          }
+        }
+        .ico-symbol {
+          width: 21px;
+          height: 21px;
+          margin-right: 14px;
+        }
+        .uk-cell-close {
+          border: 0;
+          background: none;
+          cursor: pointer;
+          width: 15px;
+          height: 15px;
+          padding: 0;
+          @media (min-width: @breakpoint-large) {
+            width: 21px;
+            height: 21px;
+          }
+        }
+        .uk-text-break {
+          word-break: break-all;
+        }
+        .uk-cell-wsm span {
+          background: @global-primary-background;
+          padding: 4px 8px;
+          font-size: 12px;
+          line-height: 14px;
+        }
+      }
+    }
+  }
+}

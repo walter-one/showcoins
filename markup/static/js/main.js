@@ -44,5 +44,9 @@ $(".mCustomScrollbar").each(function(){
     $(this).mCustomScrollbar({
         axis:"x" // horizontal scrollbar
     });
-})
+});
+
+$('.uk-card-wallet table .uk-cell-close').on('click', function(){
+    $(this).parents('tr').fadeOut();
+});
 
