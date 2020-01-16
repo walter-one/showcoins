@@ -277,8 +277,12 @@
       width: 97px
     }
     svg {
-      width: 28px;
-      height: 28px;
+      width: 18px;
+      height: 18px;
+      @media (min-width: @breakpoint-small) {
+        width: 28px;
+        height: 28px;
+      }
     }
   }
 }

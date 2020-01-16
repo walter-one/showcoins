@@ -1,0 +1,56 @@
+<div class="uk-child-width-1-2@s uk-child-width-1-4@l uk-grid-small uk-grid-match" uk-grid>
+    {{#each items}}
+    <div>
+        <div class="uk-card uk-card-algos">
+            <div class="uk-card-header">
+                <div class="uk-card-header-top">
+                    <h2 class="uk-card-title">
+                        {{title}}
+                    </h2>
+                    <div>
+                        <img class="uk-ico-black" src="%=static=%images/general/icon-per.svg" alt="icon" uk-svg>
+                        <span>{{per}}</span>
+                    </div>
+                    <div>
+                        <img class="uk-preserve" src="%=static=%images/general/icon-miners2.svg" alt="icon" uk-svg>
+                        <span>{{people}}</span>
+                    </div>
+                    <div>
+                        <img class="uk-preserve" src="%=static=%images/general/icon-coins.svg" alt="icon" uk-svg>
+                        <span>{{coins}}</span>
+                    </div>
+                </div>
+                <div class="uk-card-header-bottom">
+                    <div>
+                        Port: <strong>{{port}}</strong>
+                    </div>
+                    {{#each labels}}
+                    <span class="uk-label {{class}}">
+                        {{#if icon}}
+                            <img src="%=static=%images/general/{{icon}}" alt="icon">
+                        {{/if}}
+                        {{title}}
+                        </span>
+                    {{/each}}
+                </div>
+            </div>
+            <div class="uk-card-body">
+                <div>
+                    <span>Pool hashrate:</span>
+                    <span>
+                        <img src="%=static=%images/general/icon-curve.svg" alt="icon">
+                        {{pool_hashrate}}
+                    </span>
+                </div>
+                <div>
+                    <span>Your hashrate:</span>
+                    <span>
+                        <img src="%=static=%images/general/icon-curve.svg" alt="icon">
+                        {{your_hashrate}}
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</div>

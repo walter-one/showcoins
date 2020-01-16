@@ -1,0 +1,23 @@
+<form class="uk-search uk-search-default">
+    <div class="uk-search-header">
+        <button href="#toggle-animation" class="uk-toggle uk-button uk-button-primary" type="button" uk-toggle="target: #toggle-animation; animation: uk-animation-fade;">
+            How to start mining?
+            <img src="%=static=%images/general/arrow-bottom.svg" alt="arrow">
+        </button>
+        <div id="toggle-animation" class="uk-toggle-content" hidden>
+            -o stratum+tcp://showcoins.org:3637 -u <WALLET_ADDRESS> -p c=BTC<br>
+            Mining on selected algo. Coin is selected based on profit. Payment - BTC<br><br>
+
+            -o stratum+tcp://showcoins.org:3637 -u <WALLET_ADDRESS> -p c=BTC,m=<COIN><br>
+                Payment - BTC, mining coin - <COIN><br><br>
+
+                -o stratum+tcp://showcoins.org:3637 -u <WALLET_ADDRESS> -p c=<COIN>,m=<COIN><br>
+                Payment - <COIN>, mining coin - <COIN><br><br>
+        </div>
+    </div>
+
+    <div class="uk-form-controls">
+        <span class="uk-search-icon-flip" uk-search-icon></span>
+        <input class="uk-search-input" type="search" placeholder="Please fill the algos to browse it">
+    </div>
+</form>

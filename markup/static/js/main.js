@@ -50,3 +50,7 @@ $('.uk-card-wallet table .uk-cell-close').on('click', function(){
     $(this).parents('tr').fadeOut();
 });
 
+$('.uk-toggle').click(function(){
+  $(this).toggleClass('uk-active');
+})
+
