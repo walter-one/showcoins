@@ -51,6 +51,110 @@
                 </div>
             </div>
         </div>
+        <div class="uk-table-algos">
+
+            <table class="uk-table uk-table-middle">
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>
+                        <img src="%=static=%images/general/icon-rewards.svg" alt="icon">
+                        Rewards
+                    </th>
+                    <th>
+                        <img src="%=static=%images/general/icon-feed.svg" alt="icon">
+                        Fees
+                    </th>
+                    <th>
+                        <img src="%=static=%images/general/icon-nethash.svg" alt="icon">
+                        NetHash
+                    </th>
+                    <th>
+                        <img src="%=static=%images/general/icon-tfb.svg" alt="icon">
+                        TFB
+                    </th>
+                    <th>
+                        <img src="%=static=%images/general/icon-difficulty.svg" alt="icon">
+                        Difficulty
+                    </th>
+                    <th>
+                        <img src="%=static=%images/general/icon-height.svg" alt="icon">
+                        Height
+                    </th>
+                    <th>
+                        <img src="%=static=%images/general/icon-profit.svg" alt="icon">
+                        Profit
+                    </th>
+                    <th>
+                        <img src="%=static=%images/general/icon-curve.svg" alt="icon">
+                        Hashrate
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                {{#each table}}
+                <tr class="uk-table-title">
+                    <td>
+                        <img src="%=static=%images/general/{{icon}}" alt="icon">
+                        {{name}}
+                        <div>
+                            {{#each labels}}
+                                <span class="uk-label {{class}}">
+                                {{#if icon}}
+                                    <img src="%=static=%images/general/{{icon}}" alt="icon">
+                                {{/if}}
+                                {{title}}
+                                </span>
+                            {{/each}}
+                        </div>
+                    </td>
+                    <td>{{rewards}}</td>
+                    <td>{{fees}}</td>
+                    <td>{{nethash}}</td>
+                    <td>{{tfb}}</td>
+                    <td>{{difficulty}}</td>
+                    <td>{{height}}</td>
+                    <td>{{profit}}</td>
+                    <td>{{hashrate}}</td>
+                </tr>
+                <tr class="uk-table-content">
+                    <td colspan="9">
+                        <div class="uk-table-last">Last 50 Earnings</div>
+                        <div class="uk-table-overflow">
+                            <table>
+                                <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Amount</th>
+                                    <th>Diff</th>
+                                    <th>Block</th>
+                                    <th>Time</th>
+                                    <th>Status</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                {{#each earnings}}
+                                <tr>
+                                    <td>{{name}}</td>
+                                    <td>{{amount}}</td>
+                                    <td>{{diff}}</td>
+                                    <td>{{cont}}</td>
+                                    <td>{{time}}</td>
+                                    <td>{{status}}</td>
+                                </tr>
+                                {{/each}}
+                                </tbody>
+                            </table>
+                        </div>
+                    </td>
+
+                </tr>
+                {{/each}}
+                </tbody>
+            </table>
+        </div>
+
     </div>
     {{/each}}
 </div>
+<div class="uk-overlay"></div>
