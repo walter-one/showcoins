@@ -3,8 +3,36 @@
     > div {
       &.uk-active {
         .uk-card-algos {
-          position: relative;
-          z-index: 9999;
+          &:after {
+            content: '';
+            position: absolute;
+            bottom: -16px;
+            left: 50%;
+            transform: translateX(-13px);
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 16px 13px 0 13px;
+            border-color: #cccccc transparent transparent transparent;
+          }
+          @media (min-width: @breakpoint-small) {
+            position: relative;
+            z-index: 9999;
+          }
+          @media (max-width: @breakpoint-xsmall-max) {
+            border: 3px solid #FFCC00;
+            box-shadow: 2px 4px 7px rgba(0, 0, 0, 0.2);
+            margin: 0 0 20px;
+          }
+        }
+        .uk-table-algos {
+          display: block;
+          @media (min-width: @breakpoint-small) {
+            left: 23px;
+          }
+          @media (min-width: @breakpoint-medium) {
+            left: auto;
+          }
         }
       }
     }
@@ -22,12 +50,16 @@
     &.uk-active {
       display: block;
     }
+    @media (max-width: @breakpoint-xsmall-max) {
+      display: none !important;
+    }
   }
   .uk-label {
     padding: 3px 4px;
     font-size: 12px;
     color: @global-color;
     margin: 0 2px;
+
     &-new {
       background: rgba(188, 234, 167, 0.5);
     }
@@ -42,12 +74,17 @@
     }
   }
   .uk-search {
-    flex-direction: column-reverse;
+    flex-direction: column;
     align-items: flex-start;
-
+    @media (max-width: @breakpoint-small-max) {
+      margin: 0;
+    }
     .uk-form-controls {
       margin: 0 0 30px;
       width: 100%;
+      @media (max-width: @breakpoint-small-max) {
+        order: 3;
+      }
     }
 
     .uk-search-header {
@@ -55,8 +92,11 @@
 
       > button {
         margin-bottom: 15px;
-        font-size: 17px;
+        font-size: 14px;
         font-weight: normal;
+        @media (min-width: @breakpoint-medium) {
+          font-size: 17px;
+        }
 
         img {
           margin-left: 5px;
@@ -69,6 +109,9 @@
           }
         }
       }
+      @media (min-width: @breakpoint-medium) {
+        order: 1;
+      }
     }
   }
   .uk-toggle-content {
@@ -78,6 +121,9 @@
     background: #FFFFFF;
     box-shadow: inset 0px 4px 5px rgba(0, 0, 0, 0.05), inset 0px -4px 5px rgba(0, 0, 0, 0.05);
     box-sizing: border-box;
+    @media (max-width: @breakpoint-small-max) {
+      order: 2;
+    }
   }
   .uk-card-algos {
     padding: 15px 0;
@@ -160,18 +206,27 @@
     }
   }
   .uk-table-algos {
-    display: none;
     width: calc(~'100% - 324px') !important;
     position: absolute;
     right: 24px;
-    left: auto !important;
+    left: -9999px;
     bottom: 0;
     z-index: 9999;
-    &.uk-active {
-      display: block;
+    @media (max-width: @breakpoint-small-max) {
+      width: calc(~'100% - 46px') !important;
+    }
+    @media (max-width: @breakpoint-xsmall-max) {
+      position: static;
+      display: none;
     }
     .uk-table {
-      background: rgba(255, 255, 255, 0.9);
+      background: #f1f1f1;
+      border: 10px solid #f1f1f1;
+      @media (max-width: @breakpoint-medium-max) {
+        td {
+          padding: 8px;
+        }
+      }
       thead {
         tr {
           border-bottom: 1px solid rgba(0, 0, 0, .2);
@@ -181,24 +236,65 @@
             font-weight: normal;
           }
           img, svg {
-            width: 20px;
-            height: 20px;
+            max-width: 20px;
+            max-height: 20px;
           }
         }
       }
     }
     .uk-table-title {
       cursor: pointer;
-      > img, > svg {
-        width: 21px;
-        height: 21px;
+      font-size: 14px;
+      @media (min-width: @breakpoint-large) {
+        font-size: 17px;
       }
+      > td {
+        > img, > svg {
+          width: 21px;
+          height: 21px;
+          margin-bottom: 5px;
+        }
+        &.uk-word-break {
+          word-break: break-all;
+        }
+      }
+
       &:hover, &.uk-active {
         background: rgba(248, 223, 121, 0.4);
+      }
+
+      .uk-label {
+        @media (max-width: @breakpoint-xsmall-max) {
+          margin: 0 1px;
+          img {
+            & + span {
+              display: none;
+            }
+          }
+        }
+
+        &-new, &-hot {
+          @media (max-width: @breakpoint-xsmall-max) {
+            background: none;
+            padding: 0;
+          }
+        }
+
+        &-wsm {
+          background: rgba(255, 204, 0, 0.5);
+        }
+
+        &-boost {
+          background: rgba(38, 127, 229, 0.5);
+        }
       }
     }
     .uk-table-content {
       display: none;
+      font-size: 14px;
+      @media (min-width: @breakpoint-large) {
+        font-size: 17px;
+      }
       > td {
         padding: 0;
         .uk-table-last {
@@ -210,8 +306,18 @@
           font-weight: bold;
         }
         .uk-table-overflow {
-          height: 655px;
+          height: 395px;
           overflow-y: auto;
+          background: #fff;
+          th {
+            font-size: 14px;
+            @media (min-width: @breakpoint-large) {
+              font-size: 17px;
+            }
+          }
+          @media (min-width: @breakpoint-large) {
+            height: 655px;
+          }
         }
         table {
           width: 100%;

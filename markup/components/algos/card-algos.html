@@ -1,3 +1,4 @@
+<div class="uk-holder-grid">
 <div class="uk-child-width-1-2@s uk-child-width-1-4@l uk-grid-small uk-grid-match" uk-grid>
     {{#each items}}
     <div>
@@ -59,35 +60,35 @@
                     <th>Name</th>
                     <th>
                         <img src="%=static=%images/general/icon-rewards.svg" alt="icon">
-                        Rewards
+                        <span class="uk-visible@s">Rewards</span>
                     </th>
                     <th>
                         <img src="%=static=%images/general/icon-feed.svg" alt="icon">
-                        Fees
+                        <span class="uk-visible@s">Fees</span>
                     </th>
                     <th>
                         <img src="%=static=%images/general/icon-nethash.svg" alt="icon">
-                        NetHash
+                        <span class="uk-visible@s">NetHash</span>
                     </th>
                     <th>
                         <img src="%=static=%images/general/icon-tfb.svg" alt="icon">
-                        TFB
+                        <span class="uk-visible@s">TFB</span>
                     </th>
-                    <th>
+                    <th class="uk-visible@l">
                         <img src="%=static=%images/general/icon-difficulty.svg" alt="icon">
-                        Difficulty
+                        <span class="uk-visible@s">Difficulty</span>
                     </th>
-                    <th>
+                    <th class="uk-visible@l">
                         <img src="%=static=%images/general/icon-height.svg" alt="icon">
-                        Height
+                        <span class="uk-visible@s">Height</span>
                     </th>
                     <th>
                         <img src="%=static=%images/general/icon-profit.svg" alt="icon">
-                        Profit
+                        <span class="uk-visible@s">Profit</span>
                     </th>
                     <th>
                         <img src="%=static=%images/general/icon-curve.svg" alt="icon">
-                        Hashrate
+                        <span class="uk-visible@s">Hashrate</span>
                     </th>
                 </tr>
                 </thead>
@@ -96,14 +97,14 @@
                 <tr class="uk-table-title">
                     <td>
                         <img src="%=static=%images/general/{{icon}}" alt="icon">
-                        {{name}}
+                        <span class="uk-visible@s">{{name}}</span>
                         <div>
                             {{#each labels}}
                                 <span class="uk-label {{class}}">
                                 {{#if icon}}
                                     <img src="%=static=%images/general/{{icon}}" alt="icon">
                                 {{/if}}
-                                {{title}}
+                                <span>{{title}}</span>
                                 </span>
                             {{/each}}
                         </div>
@@ -112,10 +113,10 @@
                     <td>{{fees}}</td>
                     <td>{{nethash}}</td>
                     <td>{{tfb}}</td>
-                    <td>{{difficulty}}</td>
-                    <td>{{height}}</td>
+                    <td class="uk-visible@l">{{difficulty}}</td>
+                    <td class="uk-visible@l">{{height}}</td>
                     <td>{{profit}}</td>
-                    <td>{{hashrate}}</td>
+                    <td class="uk-word-break">{{hashrate}}</td>
                 </tr>
                 <tr class="uk-table-content">
                     <td colspan="9">
@@ -126,8 +127,8 @@
                                 <tr>
                                     <th>Name</th>
                                     <th>Amount</th>
-                                    <th>Diff</th>
-                                    <th>Block</th>
+                                    <th class="uk-visible@s">Diff</th>
+                                    <th class="uk-visible@s">Block</th>
                                     <th>Time</th>
                                     <th>Status</th>
                                 </tr>
@@ -137,8 +138,8 @@
                                 <tr>
                                     <td>{{name}}</td>
                                     <td>{{amount}}</td>
-                                    <td>{{diff}}</td>
-                                    <td>{{cont}}</td>
+                                    <td class="uk-visible@s">{{diff}}</td>
+                                    <td class="uk-visible@s">{{cont}}</td>
                                     <td>{{time}}</td>
                                     <td>{{status}}</td>
                                 </tr>
@@ -158,3 +159,4 @@
     {{/each}}
 </div>
 <div class="uk-overlay"></div>
+</div>
