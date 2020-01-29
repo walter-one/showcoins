@@ -1,0 +1,526 @@
+.uk-modal-page {
+  overflow: visible;
+}
+.uk-tab {
+  li {
+    &:not(:first-child) {
+      @media (max-width: @breakpoint-small-max) {
+        padding: 0;
+      }
+    }
+    a {
+      display: flex;
+      justify-content: center;
+      height: 100%;
+      box-sizing: border-box;
+      img {
+        width: 32px;
+        height: 32px;
+      }
+    }
+    .uk-tab-count {
+      width: 30px;
+      height: 30px;
+      border-radius: 50px;
+      border: 1px solid #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: 12px;
+    }
+  }
+}
+
+.uk-card-drop {
+  background: @global-primary-background;
+  margin-top: 0;
+  border-radius: 10px;
+  padding: 10px;
+  width: 163px;
+  font-size: 15px;
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+}
+
+.uk-card-workers {
+  padding: 20px 0;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  @media (min-width: @breakpoint-small) {
+    flex-direction: row;
+  }
+  > div {
+    padding: 0 16px;
+    &:not(:first-child) {
+      @media (min-width: @breakpoint-small) {
+        border-left: 1px solid #ccc;
+      }
+    }
+    @media (max-width: @breakpoint-small-max) {
+      &:first-child {
+        order: 1;
+      }
+      &.uk-card-active-block {
+        order:2;
+      }
+      &.uk-card-miner-block {
+        order: 3;
+      }
+      &.uk-card-balance-block {
+        order: 4;
+        margin: 13px 0;
+      }
+      &:last-child {
+        order: 5;
+      }
+    }
+  }
+  .uk-card-title-block {
+    flex: 1 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+    @media (min-width: @breakpoint-small) {
+      width: auto;
+    }
+  }
+  .uk-card-title {
+    color: @global-color;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    @media (min-width: @breakpoint-small) {
+      margin-bottom: 24px;
+    }
+    span {
+      font-size: 24px;
+      margin-right: 15px;
+      font-weight: bold;
+      @media (min-width: @breakpoint-large) {
+        font-size: 30px;
+      }
+    }
+    em {
+      color: @global-color;
+      font-style: normal;
+      font-size: 18px;
+      margin-left: 13px;
+      @media (min-width: @breakpoint-large) {
+        font-size: 20px;
+      }
+      img {
+        max-width: 27px;
+        max-height: 27px;
+      }
+    }
+  }
+  .uk-card-block {
+    display: flex;
+    background: #F4F4F4;
+    border-radius: 10px;
+    padding: 20px 18px;
+    div:first-child {
+      margin-right: 30px;
+    }
+    span {
+      display: block;
+      font-size: 14px;
+      @media (min-width: @breakpoint-large) {
+        font-size: 20px;
+      }
+    }
+    img {
+      width: 16px;
+      height: 16px;
+    }
+  }
+  .uk-card-active-block {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    max-width: 160px;
+    flex: 1 0 auto;
+    justify-content: flex-end;
+    @media (min-width: @breakpoint-small) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    > div {
+      font-size: 25px;
+      line-height: 29px;
+      color: #70C054;
+      font-weight: bold;
+      margin-left: 10px;
+      @media (min-width: @breakpoint-small) {
+        font-size: 50px;
+        line-height: 58px;
+        margin: 0;
+      }
+      &.uk-color-red {
+        color: #D60000;
+      }
+    }
+    span {
+      font-size: 14px;
+      line-height: 20px;
+      color: #000;
+      opacity: 0.5;
+      @media (min-width: @breakpoint-small) {
+        font-size: 17px;
+      }
+    }
+  }
+  .uk-card-miner-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 160px;
+    flex: 1 0 auto;
+    .uk-big-circle,
+    .uk-holder-circle > div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      &.uk-color-red {
+        border-color: #D60000;
+        @media (max-width: @breakpoint-small-max) {
+          color: #D60000;
+        }
+      }
+    }
+    .uk-big-circle {
+      font-weight: bold;
+      font-size: 14px;
+
+      @media (min-width: @breakpoint-small) {
+        width: 70px;
+        height: 70px;
+        border-radius: 100px;
+        background: #FFF;
+        border: 4px solid #70C054;
+        font-size: 20px;
+        line-height: 23px;
+      }
+      @media (max-width: @breakpoint-small-max) {
+        color: #70C054;
+      }
+      span {
+        font-size: 14px;
+        line-height: 16px;
+        font-weight: normal;
+      }
+    }
+    .uk-holder-circle {
+      display: flex;
+      @media (min-width: @breakpoint-small) {
+        display: block;
+      }
+    }
+    .uk-circle-pos,
+    .uk-circle-mn {
+      font-size: 14px;
+      position: relative;
+      font-weight: bold;
+      margin: 0 0 0 20px;
+      cursor: pointer;
+      @media (min-width: @breakpoint-small) {
+        border: 1px solid #70C054;
+        border-radius: 50px;
+        width: 27px;
+        height: 27px;
+        margin: 17px 0 17px 13px;
+        font-size: 10px;
+        line-height: 12px;
+      }
+    }
+    .uk-circle-pos {
+      &:before {
+        content: '';
+        border-bottom: 2px dotted #C4C4C4;
+        width: 18px;
+        position: absolute;
+        height: 1px;
+        left: -19px;
+      }
+      &:after {
+        content: '';
+        border-bottom: 2px dotted #C4C4C4;
+        height: 2px;
+        position: absolute;
+        width: 18px;
+        bottom: auto;
+        right: -19px;
+        @media (min-width: @breakpoint-small) {
+          border-left: 2px dotted #C4C4C4;
+          height: 18px;
+          position: absolute;
+          width: 1px;
+          bottom: -19px;
+          right: auto;
+        }
+      }
+    }
+  }
+  .uk-card-balance-block {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    @media (min-width: @breakpoint-small) {
+      width: auto;
+      margin: 0;
+    }
+    span {
+      font-size: 14px;
+    }
+    strong {
+      font-size: 24px;
+    }
+    em {
+      font-style: normal;
+      font-size: 12px;
+      color: #000;
+    }
+    div {
+      color: #808080;
+      font-size: 14px;
+    }
+  }
+}
+.uk-card-stacking {
+  background: #FFFFFF;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  .uk-card-header {
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    > div {
+      &:not(:first-child) {
+        @media (min-width: @breakpoint-small) {
+          border-left: 1px solid #ccc;
+        }
+      }
+    }
+    .uk-block-active {
+      display: flex;
+      align-items: center;
+      padding-right: 25px;
+      flex: 0 0 auto;
+      span {
+        font-size: 14px;
+        color: #000;
+        margin-right: 5px;
+        @media (min-width: @breakpoint-large) {
+          font-size: 17px;
+        }
+      }
+      div {
+        box-sizing: border-box;
+        display: flex;
+        font-size: 25px;
+        color: #70C054;
+        align-items: center;
+        justify-content: center;
+        @media (min-width: @breakpoint-small) {
+          height: 55px;
+          width: 55px;
+          border: 2px solid #70C054;
+          border-radius: 100px;
+          font-size: 40px;
+        }
+        @media (min-width: @breakpoint-large) {
+          height: 65px;
+          width: 65px;
+          font-size: 50px;
+        }
+      }
+    }
+    .uk-block-balance,
+    .uk-block-service {
+      font-size: 17px;
+      display: flex;
+      align-items: center;
+      padding: 0 25px;
+      @media (min-width: @breakpoint-medium) {
+        font-size: 24px;
+      }
+      @media (min-width: @breakpoint-large) {
+        font-size: 30px;
+      }
+    }
+    .uk-block-balance {
+      span {
+        font-size: 12px;
+        @media (min-width: @breakpoint-small) {
+          font-size: 15px;
+        }
+      }
+      @media (max-width: @breakpoint-xsmall-max) {
+        order: 3;
+        width: 100%;
+        padding: 0;
+      }
+    }
+    .uk-block-service {
+      @media (max-width: @breakpoint-xsmall-max) {
+        font-size: 14px;
+        padding: 0;
+        strong {
+          font-weight: normal;
+        }
+        span {
+          font-size: 25px;
+        }
+      }
+      span {
+        color: #FFCC00;
+      }
+    }
+  }
+  .uk-card-body {
+    padding: 0 8px;
+    @media (min-width: @breakpoint-large) {
+      padding: 0 20px;
+    }
+    table {
+      border: 0;
+      .icon-table {
+        height: 22px;
+        width: 22px;
+      }
+      .uk-word-break {
+        word-break: break-all;
+      }
+      > thead {
+        > tr {
+          > th {
+            font-size: 14px;
+            font-weight: normal;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+            @media (min-width: @breakpoint-large) {
+              font-size: 17px;
+            }
+            &:first-child {
+              padding-left: 20px;
+            }
+          }
+        }
+      }
+      > tbody {
+        > tr {
+          cursor: pointer;
+          &.uk-table-title{
+            &:hover, &.uk-active {
+              background: #FCF2C9;
+            }
+          }
+
+          &.uk-table-content {
+            display: none;
+          }
+          > td {
+            font-weight: bold;
+            font-size: 14px;
+            @media (min-width: @breakpoint-large) {
+              font-size: 20px;
+              padding: 20px 12px;
+            }
+            .uk-button {
+              font-size: 13px;
+              padding: 10px 5px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              min-width: 108px;
+              img {
+                transform: rotate(-90deg);
+                margin: 0 0 0 5px;
+              }
+              &.uk-open {
+                img {
+                  transform: none;
+                }
+              }
+              @media (max-width: @breakpoint-xsmall-max) {
+                padding: 5px 10px;
+              }
+            }
+            table.uk-sub-table {
+              border: 1px solid rgba(0, 0, 0, 0.2);
+              margin: 0 0 0 -8px;
+              width: calc(~'100% + 16px');
+              @media (min-width: @breakpoint-large) {
+                box-shadow: inset 0 4px 7px rgba(0, 0, 0, 0.1), inset 0px -4px 7px rgba(0, 0, 0, 0.1);
+                margin: 0 0 0 -20px;
+                width: calc(~'100% + 40px');
+              }
+              th {
+                font-weight: bold;
+                @media (min-width: @breakpoint-large) {
+                  padding: 20px 5px;
+                }
+
+                &:first-child {
+                  padding-left: 20px;
+                }
+              }
+              tbody {
+                tr:nth-of-type(odd) {
+                  background: rgba(226, 226, 226, 0.4);
+                }
+                td {
+                  font-size: 14px;
+                  font-weight: normal;
+                  @media (min-width: @breakpoint-large) {
+                    font-size: 15px;
+                    padding: 20px 5px;
+                  }
+                  @media (min-width: @breakpoint-small) {
+                    &:first-child {
+                      padding-left: 20px;
+                      word-break: break-all;
+                    }
+                  }
+                }
+              }
+              @media (max-width: @breakpoint-xsmall-max) {
+                thead {
+                  display: none;
+                }
+                td {
+                  display: flex;
+                  width: auto !important;
+                  max-width: none !important;
+                  min-width: 0 !important;
+                  overflow: visible !important;
+                  white-space: normal !important;
+                  .uk-hide-title {
+                    flex: 0 0 auto;
+                    font-weight: bold;
+                    width: 50%;
+                  }
+                  &:first-child {
+                    a {
+                      word-break: break-all;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+}

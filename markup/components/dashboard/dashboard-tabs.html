@@ -1,0 +1,72 @@
+<div class="uk-tabs-holder">
+    <ul class="uk-tab" uk-tab="{connect:'.uk-tab-content'}">
+        <li class="uk-active">
+            <a href="#">
+                <span class="uk-visible@s">General Dashboard</span>
+                <img class="uk-hidden@s" src="%=static=%images/general/ico-tab1.svg" uk-svg alt="">
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span class="uk-visible@s">Your workers</span>
+                <span class="uk-visible@s uk-tab-count">1</span>
+                <img class="uk-hidden@s" src="%=static=%images/general/icon-tools.svg" uk-svg alt="">
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span class="uk-visible@s">Stacking</span>
+                <img class="uk-hidden@s" src="%=static=%images/general/ico-tab2.svg" uk-svg alt="">
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span class="uk-visible@s">Masternode</span>
+                <img class="uk-hidden@s" src="%=static=%images/general/icon-mn2.svg" uk-svg alt="">
+            </a>
+        </li>
+    </ul>
+    <ul class="uk-tab-content uk-switcher">
+        <li>
+           {{> dashboard/card-workers}}
+            {{> dashboard/card-stacking}}
+        </li>
+        <li>
+            {{> dashboard/card-stacking}}
+        </li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+
+<div id="modal-settings" class="uk-flex-top" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+        <button class="uk-modal-close-default" type="button" uk-close></button>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+            sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+</div>
+
+<div id="modal-request" class="uk-flex-top" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+        <button class="uk-modal-close-default" type="button" uk-close></button>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+            sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+</div>
+
+<div id="modal-address" class="uk-flex-top" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+        <button class="uk-modal-close-default" type="button" uk-close></button>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+            sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+</div>
+
+<div id="modal-unlock" class="uk-flex-top" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+        <button class="uk-modal-close-default" type="button" uk-close></button>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+            sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+</div>
