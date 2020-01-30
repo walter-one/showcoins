@@ -28,36 +28,176 @@
     </ul>
     <ul class="uk-tab-content uk-switcher">
         <li>
-           {{> dashboard/card-workers}}
+            <h2 class="uk-tab-content-title">
+                Your workers
+            </h2>
+            {{> dashboard/card-workers}}
+            <h2 class="uk-tab-content-title">
+                Stacking
+            </h2>
+            {{> dashboard/card-stacking}}
+            <h2 class="uk-tab-content-title">
+                Stacking (with no auto exhange)
+            </h2>
+            {{> dashboard/card-stacking-ex}}
+            <h2 class="uk-tab-content-title">
+                Masternode
+            </h2>
+            {{> dashboard/card-masternode}}
+        </li>
+        <li>
+            <h2 class="uk-tab-content-title">
+                Stacking
+            </h2>
             {{> dashboard/card-stacking}}
         </li>
         <li>
-            {{> dashboard/card-stacking}}
+            <h2 class="uk-tab-content-title">
+                Stacking (with no auto exhange)
+            </h2>
+            {{> dashboard/card-stacking-ex}}
         </li>
-        <li></li>
-        <li></li>
+        <li>
+            <h2 class="uk-tab-content-title">
+                Masternode
+            </h2>
+            {{> dashboard/card-masternode}}
+        </li>
     </ul>
 </div>
 
-<div id="modal-settings" class="uk-flex-top" uk-modal>
+<div id="modal-settings" class="uk-modal-dashboard uk-flex-top" uk-modal>
     <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
-        <button class="uk-modal-close-default" type="button" uk-close></button>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-            sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <button class="uk-modal-close-outside" type="button" uk-close></button>
+        <div class="uk-modal-title">
+            Add custom setting
+        </div>
+        <div class="uk-modal-body">
+            <form action="#">
+                <div class="uk-form-inner">
+                    <div class="uk-form-row">
+                        <label for="fname">COINID <span class="uk-question" uk-tooltip="title: Please set your External address to receive auto payouts(Used for intermal addresses)">?</span></label>
+                        <div class="uk-inline">
+                            <input class="uk-input" id="fname" type="text" value="11">
+                        </div>
+                    </div>
+                    <div class="uk-form-row">
+                        <label for="fname">Symbol <span class="uk-question gray" uk-tooltip="title: Please set your External address to receive auto payouts(Used for intermal addresses)">?</span></label>
+                        <div class="uk-inline">
+                            <input class="uk-input" id="fname" type="text" value="PRX">
+                        </div>
+                    </div>
+                    <div class="uk-form-row">
+                        <label for="fname">Percent <span class="uk-question white" uk-tooltip="title: Please set your External address to receive auto payouts(Used for intermal addresses)">?</span></label>
+                        <div class="uk-inline">
+                            <span class="uk-icon-edit">
+                                <img src="%=static=%images/general/icon-edit.svg" alt="">
+                            </span>
+                            <input class="uk-input" id="fname" type="text" value="100">
+                        </div>
+                    </div>
+                    <div class="uk-form-row">
+                        <label for="fname">Holding time <span class="uk-question" uk-tooltip="title: Please set your External address to receive auto payouts(Used for intermal addresses)">?</span></label>
+                        <div class="uk-inline">
+                            <span class="uk-icon-edit">
+                                <img src="%=static=%images/general/icon-edit.svg" alt="">
+                            </span>
+                            <input class="uk-input" id="fname" type="text" value="100">
+                        </div>
+                    </div>
+                    <div class="uk-form-row">
+                        <label for="fname">External address <span class="uk-question" uk-tooltip="title: Please set your External address to receive auto payouts(Used for intermal addresses)">?</span></label>
+                        <div class="uk-inline">
+                            <span class="uk-icon-edit">
+                                <img src="%=static=%images/general/icon-edit.svg" alt="">
+                            </span>
+                            <input class="uk-input" id="fname" type="text" value="Mxfc1c864df260a55f1263f258b916a442896...">
+                        </div>
+                    </div>
+                    <div class="uk-form-row">
+                        <label for="fname">Payment COIN ID <span class="uk-question" uk-tooltip="title: Please set your External address to receive auto payouts(Used for intermal addresses)">?</span></label>
+                        <div class="uk-inline">
+                            <span class="uk-icon-edit">
+                                <img src="%=static=%images/general/icon-edit.svg" alt="">
+                            </span>
+                            <input class="uk-input" id="fname" type="text" value="PRX">
+                        </div>
+                    </div>
+                    <div class="uk-form-row">
+                        <label for="fname">BTC address <span class="uk-question" uk-tooltip="title: Please set your External address to receive auto payouts(Used for intermal addresses)">?</span></label>
+                        <div class="uk-inline">
+                            <span class="uk-icon-edit">
+                                <img src="%=static=%images/general/icon-edit.svg" alt="">
+                            </span>
+                            <input class="uk-input" id="fname" type="text" value="Mxfc1c864df260a55f1263f258b916a442896...">
+                        </div>
+                    </div>
+                    <div class="uk-checkbox-group">
+                        <label>
+                            <input type="checkbox" class="uk-checkbox">
+                            Exchange
+                        </label>
+                        <label>
+                            <input type="checkbox" class="uk-checkbox">
+                            Masternodes
+                        </label>
+                        <label>
+                            <input type="checkbox" class="uk-checkbox">
+                            Keep on balance
+                        </label>
+                        <label>
+                            <input type="checkbox" class="uk-checkbox">
+                            Pay rewards
+                        </label>
+                    </div>
+                    <div class="uk-form-footer uk-text-center">
+                        <button class="uk-button uk-button-primary">Save</button>
+                    </div>
+                </div>
+            </form>
+        </div>
     </div>
 </div>
 
-<div id="modal-request" class="uk-flex-top" uk-modal>
+<div id="modal-request" class="uk-modal-dashboard uk-flex-top" uk-modal>
     <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
-        <button class="uk-modal-close-default" type="button" uk-close></button>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-            sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <button class="uk-modal-close-outside" type="button" uk-close></button>
+        <div class="uk-modal-title">
+            Request withdraw
+        </div>
+        <div class="uk-modal-body">
+            <form action="#">
+                <div class="uk-form-inner">
+                    <div class="uk-form-row">
+                        <label for="fname">Amount <span class="uk-question" uk-tooltip="title: Please set your External address to receive auto payouts(Used for intermal addresses)">?</span></label>
+                        <div class="uk-inline">
+                            <span class="uk-icon-edit">
+                                <img src="%=static=%images/general/icon-edit.svg" alt="">
+                            </span>
+                            <input class="uk-input" id="fname" type="text" value="1120">
+                        </div>
+                    </div>
+                    <div class="uk-form-row">
+                        <label for="fname">Withdraw address <span class="uk-question gray" uk-tooltip="title: Please set your External address to receive auto payouts(Used for intermal addresses)">?</span></label>
+                        <div class="uk-inline">
+                            <span class="uk-icon-edit">
+                                <img src="%=static=%images/general/icon-edit.svg" alt="">
+                            </span>
+                            <input class="uk-input" id="fname" type="text" value="Mxfc1c864df260a55f1263f258b916a442896...">
+                        </div>
+                    </div>
+                    <div class="uk-form-footer uk-text-center">
+                        <button class="uk-button uk-button-primary">Save</button>
+                    </div>
+                </div>
+            </form>
+        </div>
     </div>
 </div>
 
 <div id="modal-address" class="uk-flex-top" uk-modal>
     <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
-        <button class="uk-modal-close-default" type="button" uk-close></button>
+        <button class="uk-modal-close-outside" type="button" uk-close></button>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
             sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     </div>
@@ -65,7 +205,7 @@
 
 <div id="modal-unlock" class="uk-flex-top" uk-modal>
     <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
-        <button class="uk-modal-close-default" type="button" uk-close></button>
+        <button class="uk-modal-close-outside" type="button" uk-close></button>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
             sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     </div>

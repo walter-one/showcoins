@@ -39,7 +39,7 @@
 
 @form-radio-size:                               16px;
 @form-radio-margin-top:                         -4px;
-@form-radio-background:                         darken(@global-muted-background, 5%);
+@form-radio-background:                         @global-background;
 
 @form-radio-checked-background:                 @global-primary-background;
 @form-radio-checked-icon-color:                 @global-inverse-color;
@@ -65,7 +65,7 @@
 
 @internal-form-select-image:                     "../../images/backgrounds/form-select.svg";
 @internal-form-radio-image:                      "../../images/backgrounds/form-radio.svg";
-@internal-form-checkbox-image:                   "../../images/backgrounds/form-checkbox.svg";
+@internal-form-checkbox-image:                   "%=static=%general/form-checkbox.svg";
 @internal-form-checkbox-indeterminate-image:     "../../images/backgrounds/form-checkbox-indeterminate.svg";
 
 
@@ -201,6 +201,10 @@
   }
   .uk-checkbox {
     margin-right: 5px;
+    border: 1px solid #000;
+    &:checked {
+      border: 1px solid @global-primary-background;
+    }
   }
 }
 
