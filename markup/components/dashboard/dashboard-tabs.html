@@ -47,11 +47,15 @@
         </li>
         <li>
             <h2 class="uk-tab-content-title">
+                Your workers
+            </h2>
+            {{> dashboard/card-workers}}
+        </li>
+        <li>
+            <h2 class="uk-tab-content-title">
                 Stacking
             </h2>
             {{> dashboard/card-stacking}}
-        </li>
-        <li>
             <h2 class="uk-tab-content-title">
                 Stacking (with no auto exhange)
             </h2>
@@ -69,7 +73,7 @@
 <div id="modal-settings" class="uk-modal-dashboard uk-flex-top" uk-modal>
     <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
         <button class="uk-modal-close-outside" type="button" uk-close></button>
-        <div class="uk-modal-title">
+        <div class="uk-modal-title uk-text-center">
             Add custom setting
         </div>
         <div class="uk-modal-body">
@@ -162,7 +166,7 @@
 <div id="modal-request" class="uk-modal-dashboard uk-flex-top" uk-modal>
     <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
         <button class="uk-modal-close-outside" type="button" uk-close></button>
-        <div class="uk-modal-title">
+        <div class="uk-modal-title uk-text-center">
             Request withdraw
         </div>
         <div class="uk-modal-body">
@@ -195,18 +199,50 @@
     </div>
 </div>
 
-<div id="modal-address" class="uk-flex-top" uk-modal>
+<div id="modal-address" class="uk-modal-dashboard uk-flex-top" uk-modal>
     <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
         <button class="uk-modal-close-outside" type="button" uk-close></button>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-            sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <div class="uk-modal-title">
+            Delete address <strong>ID 25</strong>
+        </div>
+        <ul class="uk-modal-list">
+            <li>
+                <strong>Address:</strong>
+                <span>Mxfc1c864df260a55f1263f258b916a442896875456dfg</span>
+            </li>
+            <li>
+                <strong>Balance:</strong>
+                <span>0</span>
+            </li>
+            <li>
+                <strong>Available:</strong>
+                <span>0</span>
+            </li>
+            <li>
+                <strong>Total earnings:</strong>
+                <span>0</span>
+            </li>
+        </ul>
+        <div class="uk-message-warning">PLease confirm you want to delete the address. All data related to this address will be lost.</div>
+        <button class="uk-button uk-button-warning">Delete address</button>
     </div>
 </div>
 
-<div id="modal-unlock" class="uk-flex-top" uk-modal>
+<div id="modal-unlock" class="uk-modal-dashboard uk-flex-top" uk-modal>
     <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
         <button class="uk-modal-close-outside" type="button" uk-close></button>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-            sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <div class="uk-modal-title">
+            Unlock amount on MN
+        </div>
+        <div class="uk-message-warning">
+            <p>Your balance will be unlocked within several days. Timeframe varies based on locked amount.</p>
+            <p>Be sure you turned off MN participation in address related settings. Otherwise your balance will be used automatically in new nodes activation.</p>
+        </div>
+        <ul class="uk-modal-list">
+            <li class="uk-message-success">Locked balance : 50000</li>
+            <li>Node MN1 Locked amount - 25000 XAP</li>
+            <li>Node MN2 Locked amount - 25000 XAP</li>
+        </ul>
+        <button class="uk-button uk-button-primary">Confim unlock</button>
     </div>
 </div>

@@ -56,6 +56,7 @@
     padding: 10px;
     width: 163px;
     font-size: 15px;
+    z-index: 100;
     ul {
       margin: 0;
       padding: 0;
@@ -406,16 +407,18 @@
         }
         span {
           color: #FFCC00;
+          margin-left: 5px;
         }
       }
     }
     .uk-card-body {
-      padding: 0 8px;
+      padding: 0;
       @media (min-width: @breakpoint-large) {
         padding: 0 20px;
       }
       table {
         border: 0;
+        margin-bottom: 0;
         .icon-table-holder {
           position: relative;
           em {
@@ -501,8 +504,6 @@
               }
               table.uk-sub-table {
                 border: 1px solid rgba(0, 0, 0, 0.2);
-                margin: 0 0 0 -8px;
-                width: calc(~'100% + 16px');
                 @media (min-width: @breakpoint-large) {
                   box-shadow: inset 0 4px 7px rgba(0, 0, 0, 0.1), inset 0px -4px 7px rgba(0, 0, 0, 0.1);
                   margin: 0 0 0 -20px;
@@ -533,6 +534,10 @@
                       &:first-child {
                         padding-left: 20px;
                         word-break: break-all;
+                        display: flex;
+                        img {
+                          margin-right: 5px;
+                        }
                       }
                     }
                   }
@@ -542,12 +547,12 @@
                     display: none;
                   }
                   td {
-                    display: flex;
                     width: auto !important;
                     max-width: none !important;
                     min-width: 0 !important;
                     overflow: visible !important;
                     white-space: normal !important;
+                    display: flex;
                     .uk-hide-title {
                       flex: 0 0 auto;
                       font-weight: bold;
@@ -567,15 +572,20 @@
       }
     }
   }
-
 }
+#modal-address,
+#modal-unlock {
+  .uk-modal-dialog {
+    width: 520px;
+  }
+}
+
 .uk-modal-dashboard {
   .uk-modal-dialog {
     width: 795px;
     .uk-modal-title {
       font-size: 30px;
       line-height: 35px;
-      text-align: center;
       margin-bottom: 30px;
     }
     .uk-modal-body {
@@ -622,6 +632,34 @@
           margin: 15px 0 0;
         }
       }
+    }
+    .uk-modal-list {
+      margin: 0 0 25px;
+      padding: 0;
+      list-style: none;
+      li {
+        display: flex;
+        strong, span {
+          font-weight: normal;
+          font-size: 20px;
+          word-break: break-all;
+        }
+        strong {
+          flex: 0 0 auto;
+          margin: 0 10px 0 0;
+        }
+      }
+    }
+    .uk-message-warning,
+    .uk-message-success {
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 23px;
+      color: #D60000;
+      margin-bottom: 25px;
+    }
+    .uk-message-success {
+      color: #59AB3D;
     }
   }
 }
