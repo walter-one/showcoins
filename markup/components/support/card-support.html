@@ -1,0 +1,86 @@
+<div class="uk-child-width-1-2@s uk-child-width-1-3@l uk-grid-small uk-grid-match" uk-grid>
+    {{#each items}}
+    <div>
+        <div class="uk-card uk-card-support">
+            <div class="uk-card-header">
+                <div class="uk-card-header-top">
+                    <h2 class="uk-card-title">
+                        <img src="%=static=%images/general/1x2.svg" alt="icon">
+                        {{title}}
+                    </h2>
+                    <div>
+                        <span>ROI</span>
+                        <strong>{{per}}</strong>
+                    </div>
+                </div>
+                <div class="uk-card-header-bottom">
+                    <div class="uk-holder-label">
+                        <div class="uk-circle-label">
+                            <span>{{pow}}</span>PoW
+                        </div>
+                        <div class="uk-circle-label">
+                            <span>{{pos}}</span>PoS
+                        </div>
+                        <div class="uk-circle-label">
+                            <span>{{mn}}</span>MN
+                        </div>
+                    </div>
+                    <div class="uk-holder-label">
+                        {{#each labels}}
+                        <div class="uk-icon-label">
+                            {{#if icon}}
+                            <img src="%=static=%images/general/{{icon}}" uk-svg alt="icon">
+                            {{/if}}
+                            {{title}}
+                        </div>
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
+            <div class="uk-card-body">
+                <div>
+                    <span>Defult % sent to stacking</span>
+                    <span>{{default}}</span>
+                </div>
+                <div>
+                    <span>Holding time PoS <img src="%=static=%images/general/ico-lock.svg" alt="icon"></span>
+                    <span>{{holding}}</span>
+                </div>
+                <div>
+                    <span>Last balance payouts</span>
+                    <span>{{balance}}</span>
+                </div>
+                <div>
+                    <span>Required</span>
+                    <span>{{required}}</span>
+                </div>
+                <div>
+                    <span>Pool dayli reward</span>
+                    <span>{{pool}}</span>
+                </div>
+            </div>
+            <div class="uk-card-footer">
+                <div class="uk-remaining-node">
+                    <h3 class="uk-card-title">
+                        Remaining next node
+                    </h3>
+                    <div class="uk-holder-scale">
+                        <div class="uk-scale-bg">
+                            <div class="uk-scale" style="width: 70%;"></div>
+                        </div>
+                        <div class="uk-value-scale">
+                            <span class="uk-number-left">0%</span>
+                            <span class="uk-number-right">100%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="uk-card-actions">
+                    <a href="#" class="uk-button uk-button-primary">Get deposit address</a>
+                    <a href="#" class="uk-button uk-button-primary">Setting</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    {{/each}}
+</div>
