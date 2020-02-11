@@ -166,3 +166,63 @@ var heightTable = {
 }
 heightTable.init();
 
+// Range slider
+
+$.fn.WBslider = function() {
+    return this.each(function() {
+        var $_this = $(this),
+            $_date = $('input', $_this),
+            $_title = $('.setcount', $_this),
+            $_tooltip = $('.range-tooltip', $_this),
+            thumbwidth = 50, // set this to the pixel width of the thumb
+            setnow = 100;
+
+        // set range max to current year
+        $_date.attr('max', setnow);
+        $('.end', $_this).text( setnow+'%' );
+        $_date.val(setnow - 30); // -10 years, just because...
+
+        $_date.on('input change keyup', function() {
+            var $_this = $(this),
+                val = parseInt($_date.val(), 10);
+
+
+            $_title.text( val+'%' );
+            var randNum = val*7.2;
+            $_tooltip.text( parseFloat(randNum.toFixed(1)));
+
+            var pos = (val - $_date.attr('min'))/($_date.attr('max') - $_date.attr('min'));
+
+            // position the title with the thumb
+            var thumbCorrect = thumbwidth * (pos - 0.5) * -1,
+                titlepos = Math.round( ( pos * $_date.width() ) - thumbwidth/4 + thumbCorrect );
+
+            $_title.css({'left': titlepos});
+            $_tooltip.css({'left': titlepos});
+
+            // show "progress" on the track
+            pos = Math.round( pos * 99 ); // to hide stuff behide the thumb
+            var grad = 'linear-gradient(90deg, #FFCC00 ' + pos + '%,#E6E6E6 ' + (pos+1) + '%)';
+            $_date.css({'background': grad});
+
+        }).on('focus', function() {
+            $_tooltip.css('opacity', 1);
+            if ( isNaN( $(this).val() ) ) {
+                $(this).val(0);
+            }
+        }).on('focusout', function() {
+            $_tooltip.css('opacity', 0);
+        }).trigger('change');
+
+        $(window).on('resize', function() {
+            $_date.trigger('change');
+        });
+    });
+};
+
+$(function() {
+
+    $('.slider').WBslider();
+
+});
+
