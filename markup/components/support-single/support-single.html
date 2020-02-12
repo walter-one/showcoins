@@ -27,7 +27,7 @@
         Mastrenodes
     </h2>
 </div>
-<div class=" uk-child-width-1-2@m uk-grid-small uk-grid-match" uk-grid>
+<div class="uk-child-width-1-2@m uk-grid-small uk-grid-match" uk-grid>
     <div>
         <div class="uk-card">
             <div class="uk-card-title">
@@ -36,12 +36,12 @@
             </div>
             <div class="uk-card-body">
                 <ul>
-                    <li><span>Hosted MN:</span> <strong>7</strong></li>
+                    <li><span>Hosted MN: </span> <strong>7</strong></li>
                     <li>
-                        <span>Pool Dally Yield:</span>
+                        <span>Pool Dally Yield: </span>
                         <strong>15.2</strong>
                     </li>
-                    <li>
+                    <li class="uk-has-range">
                         <span>Remaining (next node):</span>
                         <div class="slider">
 
@@ -61,8 +61,145 @@
         </div>
     </div>
     <div>
-        <div class="uk-card">
-
+        <div class="uk-card uk-card-balance">
+            <div class="uk-card-title">
+                <h3>Balance in nodes</h3>
+                <form class="uk-search uk-search-default">
+                    <div class="uk-form-controls">
+                        <button class="uk-search-icon-flip" uk-search-icon></button>
+                        <input class="uk-search-input" type="search" placeholder="Search by name">
+                    </div>
+                </form>
+            </div>
+            <div class="uk-card-body">
+                <table class="uk-table uk-table-divider">
+                    <tr>
+                        <td><strong>MN1</strong></td>
+                        <td>Amount: <strong>25000</strong></td>
+                        <td class="uk-text-truncate uk-width-small">
+                            <img class="icon-table uk-visible@l" src="%=static=%images/general/ico-change.svg" alt="">
+                            <a href="#">Mxfc1c864df260a55f1263f258b916a442896a6514</a>
+                        </td>
+                        <td>
+                            <button class="uk-button uk-button-primary">
+                                Unlock
+                                <img src="%=static=%images/general/arrow-bottom.svg" alt="arrow">
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>MN1</strong></td>
+                        <td>Amount: <strong>25000</strong></td>
+                        <td class="uk-text-truncate uk-width-small">
+                            <img class="icon-table uk-visible@l" src="%=static=%images/general/ico-change.svg" alt="">
+                            <a href="#">Mxfc1c864df260a55f1263f258b916a442896a6514</a>
+                        </td>
+                        <td>
+                            <button class="uk-button uk-button-primary">
+                                Unlock
+                                <img src="%=static=%images/general/arrow-bottom.svg" alt="arrow">
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>MN1</strong></td>
+                        <td>Amount: <strong>25000</strong></td>
+                        <td class="uk-text-truncate uk-width-small">
+                            <img class="icon-table uk-visible@l" src="%=static=%images/general/ico-change.svg" alt="">
+                            <a href="#">Mxfc1c864df260a55f1263f258b916a442896a6514</a>
+                        </td>
+                        <td>
+                            <button class="uk-button uk-button-primary">
+                                Unlock
+                                <img src="%=static=%images/general/arrow-bottom.svg" alt="arrow">
+                            </button>
+                        </td>
+                    </tr>
+                </table>
+                <div class="uk-card-action">
+                    <a href="#">Show all</a>
+                </div>
+            </div>
         </div>
     </div>
+</div>
+<div class="uk-section-title">
+    <h2 class="uk-h3">
+        Stacking
+    </h2>
+</div>
+<div class="uk-child-width-1-2@m uk-grid-small uk-grid-match" uk-grid>
+    {{#each items}}
+    <div>
+        <div class="uk-card uk-card-support uk-card-support-single {{card_active}}">
+            <div class="uk-card-header">
+                <div class="uk-card-header-top">
+                    <h2 class="uk-card-title">
+                        <img src="%=static=%images/general/ico-change.svg" alt="icon">
+                        {{title}}
+                    </h2>
+                </div>
+                <div class="uk-card-header-bottom">
+                    <ul>
+                        <li class="uk-list-active">
+                            <span>Pay rewards: </span>
+                            <strong>{{pay_rewards}}</strong>
+                        </li>
+                        <li class="uk-list-noactive">
+                            <span>Pay rewards: </span>
+                            <strong>{{mastrenode}}</strong>
+                        </li>
+                    </ul>
+                    <div>
+                        <span class="uk-label">
+                            Stacking FEE: <strong>{{fee}}</strong>
+                        </span>
+                        <span class="uk-label">
+                            ROI: <strong>{{roi}}</strong>
+                        </span>
+                    </div>
+
+                </div>
+            </div>
+            <div class="uk-card-body">
+                <div>
+                    <span>Sent to stack: </span>
+                    <strong>{{stack}}</strong>
+                </div>
+                <div>
+                    <span>Min hold. time: </span>
+                    <strong>{{hold_time}}</strong>
+                </div>
+                <div>
+                    <span>Day collect: </span>
+                    <strong>{{collect}}</strong>
+                </div>
+                <div>
+                    <span>Your holding time: </span>
+                    <strong>{{holding_time}}</strong>
+                </div>
+                <div>
+                    <span>Last payout: </span>
+                    <strong>{{payout}}</strong>
+                </div>
+                <div>
+                    <span>Balance: </span>
+                    <strong>{{balance}}</strong>
+                </div>
+            </div>
+            <div class="uk-card-footer">
+                <div class="uk-card-actions">
+                    <a href="#" class="uk-button uk-button-secondary">
+                        Withdraw
+                        <img src="%=static=%images/general/arrow-bottom.svg" alt="arrow">
+                    </a>
+                    <a href="#" class="uk-button uk-button-primary">
+                        Setting
+                        <img src="%=static=%images/general/arrow-bottom.svg" alt="arrow">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{/each}}
 </div>

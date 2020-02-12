@@ -1,8 +1,15 @@
 .uk-content-support-single {
   .uk-section-title {
-    padding: 55px 0 25px;
+    padding: 30px 0 20px;
+    @media (min-width: @breakpoint-large) {
+      padding: 55px 0 25px;
+    }
     h2 {
       margin: 0;
+      font-size: 24px;
+      @media (min-width: @breakpoint-large) {
+        font-size: 30px;
+      }
     }
   }
   .uk-section-header {
@@ -94,14 +101,24 @@
     }
   }
   .uk-card {
-    padding: 30px;
+    padding: 18px 18px 0;
     background: #FFF;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    @media (min-width: @breakpoint-large) {
+      padding: 30px 30px 0;
+    }
+    &.uk-card-balance {
+      padding-bottom: 20px;
+    }
     .uk-card-title {
       padding: 0;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      margin-bottom: 20px;
+      @media (min-width: @breakpoint-large) {
+        margin-bottom: 30px;
+      }
       h3 {
         margin: 0;
         font-size: 20px;
@@ -121,7 +138,6 @@
           @media (min-width: @breakpoint-large) {
             font-size: 20px;
           }
-
         }
       }
     }
@@ -134,17 +150,29 @@
         li {
           display: flex;
           align-items: center;
+          flex-wrap: wrap;
+          margin-bottom: 10px;
+          font-size: 16px;
+          @media (min-width: @breakpoint-large) {
+            margin-bottom: 30px;
+            font-size: 18px;
+          }
+          &.uk-has-range {
+            > span {
+              margin: 0 15px 35px 0;
+            }
+          }
           > span {
             flex: 0 0 auto;
           }
           .slider {
-            margin: 0 0 -25px 15px;
-            width: 95%
+            margin: 0 0 10px;
+            width: 285px
           }
           .holder-range {
             display: flex;
             justify-content: space-between;
-            margin: 0 -20px 0 -3px;
+            margin: 0 0 0 -3px;
             font-size: 16px;
             span {
               position: relative;
@@ -157,6 +185,10 @@
                 height: 10px;
                 background: @global-primary-background;
                 border-radius: 50px;
+              }
+              &.end:before {
+                left: auto;
+                right: 0;
               }
             }
           }
@@ -188,10 +220,11 @@
             padding: 0 0 10px;
             box-sizing: border-box;
             opacity: 0;
+            transform: translateX(-50%);
           }
           .range {
             position: relative;
-            width: 95%;
+            width: 285px;
           }
           input[type=range] {
             -webkit-appearance: none;
@@ -200,6 +233,9 @@
             height: 3px;
             padding: 0;
             box-sizing: content-box;
+            position: relative;
+            z-index: 1;
+            cursor: pointer;
           }
           input[type=range]:focus {
             outline: none;
@@ -212,5 +248,165 @@
         }
       }
     }
+    .uk-search {
+      max-width: 264px;
+      margin: 0;
+      button {
+        svg {
+          width: 18px;
+          height: 18px;
+        }
+      }
+      .uk-search-input {
+        height: 44px;
+        width: calc(~'100% - 50px');
+        font-size: 16px;
+        padding: 0 15px;
+      }
+      .uk-search-icon {
+        width: 50px;
+      }
+    }
+    .uk-table {
+      margin: 0;
+      td {
+        padding: 10px 12px;
+        vertical-align: middle;
+        &.uk-text-truncate {
+          font-size: 15px;
+        }
+        @media (max-width: @breakpoint-small-max) {
+          font-size: 14px;
+        }
+      }
+      .uk-button {
+        font-size: 13px;
+        padding: 10px 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 80px;
+        img {
+          transform: rotate(-90deg);
+          margin: 0 0 0 5px;
+        }
+      }
+    }
+    .uk-card-action {
+      text-align: center;
+      font-weight: bold;
+      a {
+        text-decoration: underline;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  .uk-card-support {
+    padding: 20px;
+    &.uk-card-active {
+      .uk-card-body {
+        display: block;
+      }
+    }
+    .uk-card-header {
+      padding: 0;
+      word-break: break-all;
+      cursor: pointer;
+      .uk-card-title {
+        align-items: flex-start;
+        font-size: 14px;
+        line-height: 17px;
+        font-weight: bold;
+        margin-bottom: 18px;
+        justify-content: flex-start;
+        @media (min-width: @breakpoint-medium) {
+          font-size: 25px;
+          line-height: 29px;
+          margin-bottom: 18px;
+        }
+        img {
+          margin-right: 5px;
+        }
+      }
+      .uk-card-header-bottom {
+        padding-bottom: 20px;
+        border-bottom: 1px solid #FFCC00;
+        ul {
+          display: flex;
+          padding: 0;
+          margin: 0 0 15px;
+          list-style: none;
+          @media (max-width: @breakpoint-small-max) {
+            font-size: 14px;
+          }
+          .uk-list-active {
+            strong {
+              color: #70C054;
+            }
+            margin-right: 30px;
+          }
+          .uk-list-noactive {
+            strong {
+              color: #FF0000;
+            }
+          }
+        }
+        .uk-label {
+          color: #000;
+          font-size: 14px;
+          @media (min-width: @breakpoint-medium) {
+            font-size: 16px;
+          }
+          strong {
+            font-size: 14px;
+            @media (min-width: @breakpoint-medium) {
+              font-size: 20px;
+            }
+          }
+        }
+      }
+    }
+    .uk-card-body {
+      padding: 20px 0;
+      border-bottom: 1px solid #FFCC00;
+      display: none;
+      @media (max-width: @breakpoint-small-max) {
+        font-size: 14px;
+      }
+      > div {
+        margin-bottom: 10px;
+        @media (min-width: @breakpoint-medium) {
+          font-size: 16px;
+        }
+      }
+
+      > div > * {
+        width: 49%;
+        display: inline-block;
+      }
+    }
+    .uk-card-footer {
+      padding: 20px 0 0;
+      .uk-card-actions {
+        display: flex;
+        justify-content: flex-start;
+        padding: 0;
+        .uk-button {
+          padding: 6px 15px;
+          font-size: 15px;
+          display: flex;
+          align-items: center;
+          margin-right: 16px;
+          img {
+            transform: rotate(-90deg);
+            margin: 0 0 0 5px;
+          }
+        }
+      }
+    }
+
   }
 }
+

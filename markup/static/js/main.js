@@ -55,6 +55,11 @@ $('.uk-toggle').click(function(){
   $(this).toggleClass('uk-active');
 });
 
+$('.uk-card-support-single').click(function(){
+  $(this).toggleClass('uk-card-active');
+});
+
+
 
 var heightTable = {
     state: {
@@ -174,9 +179,9 @@ $.fn.WBslider = function() {
             $_date = $('input', $_this),
             $_title = $('.setcount', $_this),
             $_tooltip = $('.range-tooltip', $_this),
+            $_widthRange = $('.range', $_this),
             thumbwidth = 50, // set this to the pixel width of the thumb
             setnow = 100;
-
         // set range max to current year
         $_date.attr('max', setnow);
         $('.end', $_this).text( setnow+'%' );
@@ -197,8 +202,10 @@ $.fn.WBslider = function() {
             var thumbCorrect = thumbwidth * (pos - 0.5) * -1,
                 titlepos = Math.round( ( pos * $_date.width() ) - thumbwidth/4 + thumbCorrect );
 
+            var positionTooltip = $_widthRange.width()*( val / 100);
+
             $_title.css({'left': titlepos});
-            $_tooltip.css({'left': titlepos});
+            $_tooltip.css({'left': positionTooltip});
 
             // show "progress" on the track
             pos = Math.round( pos * 99 ); // to hide stuff behide the thumb
