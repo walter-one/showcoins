@@ -143,6 +143,13 @@
     }
     .uk-card-body {
       padding: 0;
+      .uk-table-scroll {
+        height: 225px;
+        overflow-y: auto;
+        @media (max-width: @breakpoint-small-max) {
+          height: 185px;
+        }
+      }
       ul {
         margin: 0;
         padding: 0;
@@ -200,10 +207,12 @@
             top: 3px;
             left: 50%;
             width: 60px;
-            height: 1em;
+            height: 22px;
             text-align: center;
             white-space: nowrap;
             font-size: 16px;
+            background: #fff;
+            z-index: 1;
           }
           .range-tooltip {
             position: absolute;
@@ -274,6 +283,9 @@
         vertical-align: middle;
         &.uk-text-truncate {
           font-size: 15px;
+          &.uk-width-small {
+            width: 400px;
+          }
         }
         @media (max-width: @breakpoint-small-max) {
           font-size: 14px;
@@ -406,7 +418,33 @@
         }
       }
     }
-
+  }
+  .uk-tab-content {
+    .uk-text-break {
+      word-break: break-all;
+    }
+  }
+  .uk-tab-graph {
+    > li {
+      a {
+        box-shadow: none;
+        background: @global-background;
+        border: 1px solid #EA8F90;
+        border-radius: 3px;
+        font-size: 14px;
+        padding: 5px;
+        color: #000;
+      }
+    }
+  }
+  .uk-graph-content {
+    padding: 25px 0;
+    li {
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
   }
 }
 
