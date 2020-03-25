@@ -1,0 +1,186 @@
+.uk-section-worker {
+  &-title {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    flex-wrap: wrap;
+    @media (min-width: @breakpoint-medium) {
+      margin-bottom: 32px;
+      font-size: 18px;
+    }
+    @media (min-width: @breakpoint-large) {
+      margin-bottom: 60px;
+      font-size: 25px;
+    }
+    .uk-title-icon {
+      margin-right: 12px;
+      img {
+        width: 29px;
+        height: 34px;
+      }
+    }
+    strong {
+      margin-left: 15px;
+      @media (max-width: @breakpoint-small-max) {
+        display: block;
+        margin: 0 10px 0 0;
+      }
+    }
+    .uk-title-label {
+      background: rgba(255, 204, 0, .5);
+      font-size: 15px;
+      padding: 3px 10px;
+      margin-left: 22px;
+      @media (max-width: @breakpoint-small-max) {
+        margin: 0 0 0 auto;
+      }
+      @media (max-width: @breakpoint-xsmall-max) {
+        margin: 15px 0 0;
+      }
+    }
+  }
+  .uk-card-worker {
+    padding: 8px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    @media (min-width: @breakpoint-large) {
+      padding: 20px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+    .uk-card-title {
+      font-size: 18px;
+      border-bottom: 1px solid rgba(0, 0, 0, .2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+      @media (min-width: @breakpoint-large) {
+        font-size: 25px;
+      }
+      img {
+        width: 20px;
+        height: 20px;
+        margin-right: 5px;
+        @media (min-width: @breakpoint-large) {
+          width: 32px;
+          height: 32px;
+        }
+      }
+    }
+    .uk-card-content {
+      font-size: 18px;
+      text-align: center;
+      @media (min-width: @breakpoint-large) {
+        font-size: 22px;
+      }
+    }
+
+  }
+  .uk-card-data {
+    margin-bottom: 30px;
+    @media (min-width: @breakpoint-medium) {
+      margin-bottom: 60px;
+    }
+    .uk-card-style-title {
+      font-size: 20px;
+      font-weight: bold;
+      border: 0;
+      padding: 0;
+    }
+    .uk-card-table {
+      height: 200px;
+      overflow-y: auto;
+      table {
+        width: 100%;
+        text-align: center;
+        table-layout: fixed;
+        th {
+          border: 1px solid #FFCC00;
+        }
+        th, td {
+          font-size: 13px;
+          padding: 0 5px;
+          @media (min-width: @breakpoint-xlarge) {
+            font-size: 17px;
+          }
+        }
+        td {
+          word-break: break-all;
+        }
+      }
+    }
+    .uk-card-content {
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        font-size: 14px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        @media (min-width: @breakpoint-xlarge) {
+          font-size: 20px;
+        }
+        &.uk-list-total,
+        &.uk-list-time {
+          li {
+            border: 1px solid rgba(255, 204, 0, .5);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            margin-bottom: 7px;
+          }
+        }
+        &.uk-list-time {
+          li {
+            padding: 0 15px 0 0;
+            span:first-child {
+              background: @global-primary-background;
+              padding: 10px;
+              max-width: 140px;
+              width: 100%;
+              text-align: left;
+              margin-right: 5px;
+            }
+          }
+        }
+
+      }
+      .uk-list-payouts {
+        text-align: left;
+        padding: 15px;
+        border: 1px solid rgba(255, 204, 0, .5);
+        strong {
+          font-size: 16px;
+          display: block;
+          @media (min-width: @breakpoint-xlarge) {
+            font-size: 20px;
+          }
+        }
+        .uk-table-overflow {
+          height: 180px;
+          overflow-y: auto;
+          font-size: 14px;
+          @media (min-width: @breakpoint-xlarge) {
+            font-size: 20px;
+          }
+          table {
+            width: 100%;
+            .uk-cell-tx {
+              background: @global-primary-background;
+              padding: 2px 5px;
+              display: flex;
+              justify-content: space-around;
+              align-items: center;
+              &:hover {
+                text-decoration: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

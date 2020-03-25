@@ -195,7 +195,7 @@
                         Withdraw
                         <img src="%=static=%images/general/arrow-bottom.svg" alt="arrow">
                     </a>
-                    <a href="#" class="uk-button uk-button-primary">
+                    <a href="#modal-settings" uk-toggle class="uk-button uk-button-primary">
                         Setting
                         <img src="%=static=%images/general/arrow-bottom.svg" alt="arrow">
                     </a>
@@ -204,4 +204,102 @@
         </div>
     </div>
     {{/each}}
+</div>
+
+<div id="modal-settings" class="uk-modal-dashboard uk-flex-top" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+        <button class="uk-modal-close-outside" type="button" uk-close></button>
+        <div class="uk-modal-title uk-text-center">
+            Add custom setting
+        </div>
+        <div class="uk-modal-body">
+            <form action="#">
+                <div class="uk-form-inner">
+                    <div class="uk-form-row">
+                        <label for="fname">Symbol <span class="uk-question gray" uk-tooltip="title: Please set your External address to receive auto payouts(Used for intermal addresses)">?</span></label>
+                        <div class="uk-inline">
+                            <input class="uk-input" id="fname" type="text" value="PRX">
+                        </div>
+                    </div>
+                    <div class="uk-form-row">
+                        <label for="fname">Percent <span class="uk-question white" uk-tooltip="title: Please set your External address to receive auto payouts(Used for intermal addresses)">?</span></label>
+                        <div class="uk-inline">
+                            <span class="uk-icon-edit">
+                                <img src="%=static=%images/general/icon-edit.svg" alt="">
+                            </span>
+                            <input class="uk-input" id="fname" type="text" value="100">
+                        </div>
+                    </div>
+                    <div class="uk-form-row">
+                        <label for="fname">Holding time <span class="uk-question" uk-tooltip="title: Please set your External address to receive auto payouts(Used for intermal addresses)">?</span></label>
+                        <div class="uk-inline">
+                            <span class="uk-icon-edit">
+                                <img src="%=static=%images/general/icon-edit.svg" alt="">
+                            </span>
+                            <input class="uk-input" id="fname" type="text" value="100">
+                        </div>
+                    </div>
+                    <div class="uk-form-row">
+                        <label for="fname">External address <span class="uk-question" uk-tooltip="title: Please set your External address to receive auto payouts(Used for intermal addresses)">?</span></label>
+                        <div class="uk-inline">
+                            <span class="uk-icon-edit">
+                                <img src="%=static=%images/general/icon-edit.svg" alt="">
+                            </span>
+                            <input class="uk-input" id="fname" type="text" value="Mxfc1c864df260a55f1263f258b916a442896...">
+                        </div>
+                    </div>
+                    <div class="uk-form-row">
+                        <label for="fname">Payment COIN ID <span class="uk-question" uk-tooltip="title: Please set your External address to receive auto payouts(Used for intermal addresses)">?</span></label>
+                        <div class="uk-inline">
+                            <span class="uk-icon-edit">
+                                <img src="%=static=%images/general/icon-edit.svg" alt="">
+                            </span>
+                            <input class="uk-input" id="fname" type="text" value="PRX">
+                        </div>
+                    </div>
+                    <div class="uk-form-row">
+                        <label for="fname">BTC address <span class="uk-question" uk-tooltip="title: Please set your External address to receive auto payouts(Used for intermal addresses)">?</span></label>
+                        <div class="uk-inline">
+                            <span class="uk-icon-edit">
+                                <img src="%=static=%images/general/icon-edit.svg" alt="">
+                            </span>
+                            <input class="uk-input" id="fname" type="text" value="Mxfc1c864df260a55f1263f258b916a442896...">
+                        </div>
+                    </div>
+                    <div class="uk-checkbox-group">
+                        <label>
+                            <input type="checkbox" class="uk-checkbox">
+                            <div>Exchange
+                                <span class="uk-question" uk-tooltip="title: Please set your External address to receive auto payouts(Used for intermal addresses)">?</span>
+                            </div>
+                        </label>
+                        <label>
+                            <input type="checkbox" class="uk-checkbox">
+                            <div>
+                                Masternodes
+                                <span class="uk-question" uk-tooltip="title: Please set your External address to receive auto payouts(Used for intermal addresses)">?</span>
+                            </div>
+                        </label>
+                        <label>
+                            <input type="checkbox" class="uk-checkbox">
+                            <div>
+                                Keep on balance
+                                <span class="uk-question" uk-tooltip="title: Please set your External address to receive auto payouts(Used for intermal addresses)">?</span>
+                            </div>
+                        </label>
+                        <label>
+                            <input type="checkbox" class="uk-checkbox">
+                            <div>
+                                Pay rewards
+                                <span class="uk-question" uk-tooltip="title: Please set your External address to receive auto payouts(Used for intermal addresses)">?</span>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="uk-form-footer uk-text-center">
+                        <button class="uk-button uk-button-primary">Save</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
 </div>
