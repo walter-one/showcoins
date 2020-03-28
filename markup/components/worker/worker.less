@@ -47,6 +47,12 @@
       padding: 20px;
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     }
+    &.uk-card-graph {
+      padding: 8px 0;
+      @media (min-width: @breakpoint-large) {
+        padding: 20px 0;
+      }
+    }
     .uk-card-title {
       font-size: 18px;
       border-bottom: 1px solid rgba(0, 0, 0, .2);
@@ -130,7 +136,9 @@
             justify-content: space-between;
             align-items: center;
             padding: 15px;
-            margin-bottom: 7px;
+            &:not(:last-child) {
+              margin-bottom: 7px;
+            }
           }
         }
         &.uk-list-time {
@@ -143,6 +151,7 @@
               width: 100%;
               text-align: left;
               margin-right: 5px;
+              box-sizing: border-box;
             }
           }
         }
