@@ -1,15 +1,17 @@
-<div>
-    <div class="uk-sidenav-bar uk-visible@m">
-        <a class="uk-navbar-item uk-logo" href="#">
-            <img src="%=static=%images/general/logo-white.svg" alt="Showcoins">
-        </a>
-        <ul class="uk-nav uk-nav-default">
-            {{#each items}}
-            <li class="uk-nav-item {{#if active}}uk-active{{/if}}">
-                <a href="{{link}}"><img class="uk-icon-nav" src="%=static=%images/general/{{icon}}" alt="{{label}}">{{label}}</a>
-            </li>
-            {{/each}}
-        </ul>
+<div class="uk-sidebar">
+    <div>
+        <div class="uk-sidenav-bar uk-visible@m">
+            <a class="uk-navbar-item uk-logo" href="#">
+                <img src="%=static=%images/general/logo-white.svg" alt="Showcoins">
+            </a>
+            <ul class="uk-nav uk-nav-default">
+                {{#each items}}
+                <li class="uk-nav-item {{#if active}}uk-active{{/if}}">
+                    <a href="{{link}}"><img class="uk-icon-nav" src="%=static=%images/general/{{icon}}" alt="{{label}}">{{label}}</a>
+                </li>
+                {{/each}}
+            </ul>
 
+        </div>
     </div>
 </div>
