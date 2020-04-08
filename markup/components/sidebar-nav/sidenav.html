@@ -4,7 +4,7 @@
             <a class="uk-navbar-item uk-logo" href="#">
                 <img src="%=static=%images/general/logo-white.svg" alt="Showcoins">
             </a>
-            <ul class="uk-nav uk-nav-default">
+            <ul class="uk-nav uk-nav-default" uk-sticky="bottom: .uk-main-inner; offset: 105;">
                 {{#each items}}
                 <li class="uk-nav-item {{#if active}}uk-active{{/if}}">
                     <a href="{{link}}"><img class="uk-icon-nav" src="%=static=%images/general/{{icon}}" alt="{{label}}">{{label}}</a>
